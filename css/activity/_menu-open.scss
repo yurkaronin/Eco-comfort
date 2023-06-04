@@ -38,3 +38,9 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .menu-open .header {
+    border-bottom: 2px solid #7A7A7A;
+  }
+}

@@ -8,6 +8,7 @@
   pointer-events: none;
   visibility: hidden;
   z-index: 2;
+
   &::before {
     content: '';
     display: block;
@@ -23,6 +24,7 @@
     opacity: 0.6;
     z-index: 1;
   }
+
   &::after {
     content: '';
     display: block;
@@ -60,41 +62,67 @@
     text-transform: uppercase;
     color: #FFFFFF;
     transition: color 0.3s;
-    // position: relative;
-    // &::before {
-    //   content: '';
-    //   display: block;
-    //   width: 100%;
-    //   height: 2px;
-    //   background-color: transparent;
-    //   position: absolute;
-    //   bottom: 0;
-    //   z-index: 2;
-    //   left: 0;
-    //   right: 0;
-    //   transition: background-color 0.3s;
-    // }
-    // &::after {
-    //   content: '';
-    //   display: block;
-    //   width: 100%;
-    //   height: 2px;
-    //   background-color: transparent;
-    //   position: absolute;
-    //   top: 0;
-    //   z-index: 2;
-    //   left: 0;
-    //   right: 0;
-    //   transition: background-color 0.3s;
-    // }
 
     &:hover {
       color: #99BD3D !important;
-      // &::after,
-      // &::before {
-      //   background-color: #99BD3D;
-      // }
 
     }
+  }
+
+  &__contacts {
+    display: none;
+
+  }
+  &__callback {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navigation .wrapper {
+    padding-inline: 0;
+  }
+
+  .main-navigation__list {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .main-navigation__link {
+    padding: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-navigation__contacts {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+
+    li {
+      padding: 10px 20px;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  .main-navigation__callback {
+    display: block;
+    max-width: max-content;
+    margin: 16px auto;
+    color: #fff !important;
+    text-shadow: none;
+    padding: 20px 24px;
+    margin-bottom: 64px;
+  }
+  .main-navigation::after,
+  .main-navigation::before {
+    display: none;
   }
 }
