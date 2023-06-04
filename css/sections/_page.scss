@@ -1,0 +1,10 @@
+.page {
+  &__header {
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    z-index: 11;
+    transition: all 0.3s;
+    color: #ffffff;
+  }
+}

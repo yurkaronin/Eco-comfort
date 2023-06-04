@@ -1,0 +1,62 @@
+.button {
+  display: block;
+  text-align: center;
+  padding: 20px 24px;
+  background-color: #99BD3D;
+  border-radius: 10px;
+  color: #ffffff;
+  border: none;
+  max-width: max-content;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 4px rgba(68, 49, 0, 0.2);
+
+  span {
+    pointer-events: none;
+    position: relative;
+    z-index: 10;
+  }
+
+  svg {
+    position: relative;
+    z-index: 11;
+    pointer-events: none;
+  }
+
+  .decorate {
+    position: absolute;
+    z-index: 4;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #436F68;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s, color 0.3s, background-color 0.4s;
+    pointer-events: none;
+  }
+
+  // активности
+  &:hover,
+  &:active,
+  &:focus {
+    .decorate {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

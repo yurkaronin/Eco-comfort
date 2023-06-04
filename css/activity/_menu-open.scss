@@ -1,0 +1,40 @@
+.menu-open {
+  .page__header {
+    background-color: #fff;
+    color: #7A7A7A;
+  }
+
+  .main-navigation {
+    a {
+      color: #7A7A7A;
+    }
+  }
+
+  .header,
+  .header__text {
+    color: #7A7A7A;
+  }
+
+  .header__logo {
+    .first {
+      fill: #7A7A7A;
+    }
+
+    .last {
+      fill: #99BD3D;
+    }
+  }
+
+  .main-navigation {
+    top: 0;
+    opacity: 1;
+    pointer-events: initial;
+    visibility: initial;
+  }
+
+  .main-navigation::before,
+  .main-navigation::after {
+    width: 100%;
+    opacity: 1;
+  }
+}

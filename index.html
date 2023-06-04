@@ -26,175 +26,319 @@
   <link rel="stylesheet" href="libs/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<header class="header">
-  <!-- Контент шапки -->
-</header>
-<main class="main">
-  <section class="first-screen">
-    <!-- Контент первого экрана -->
-    <div class="first-screen__slider swiper">
-      <div class="swiper-wrapper">
-        <!-- слайд  -->
-        <div class="first-screen__slide swiper-slide">
-          <div class="wrapper">
-            <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image">
-            <div class="first-screen__details">
-              <div class="first-screen__header">
-                <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
-                <h3 class="first-screen__name">Резиновая плитка</h3>
-              </div>
-              <ul class="first-screen__advantages-list">
-                <li class="first-screen__advantages-item icon-1">Нескользящая поверхность,
-                  даже если она мокрая - не скользит</li>
-                <li class="first-screen__advantages-item icon-2">Амортизирует удары
-                  и предотвращает травмы</li>
-                <li class="first-screen__advantages-item icon-3">В 10 раз менее подвержена нагреву солнца чем бетон или
-                  асфальт</li>
-                <li class="first-screen__advantages-item icon-4">На 100% состоит из переработанной резины</li>
-              </ul>
-              <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
-            </div>
-          </div>
-        </div>
-        <!-- КОНЕЦ слайд  -->
 
-        <!-- слайд  -->
-        <div class="first-screen__slide swiper-slide">
-          <div class="wrapper">
-            <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image">
-            <div class="first-screen__details">
-              <div class="first-screen__header">
-                <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
-                <h3 class="first-screen__name">Резиновая плитка</h3>
-              </div>
-              <ul class="first-screen__advantages-list">
-                <li class="first-screen__advantages-item icon-1">Нескользящая поверхность,
-                  даже если она мокрая - не скользит</li>
-                <li class="first-screen__advantages-item icon-2">Амортизирует удары
-                  и предотвращает травмы</li>
-                <li class="first-screen__advantages-item icon-3">В 10 раз менее подвержена нагреву солнца чем бетон или
-                  асфальт</li>
-                <li class="first-screen__advantages-item icon-4">На 100% состоит из переработанной резины</li>
-              </ul>
-              <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
-            </div>
-          </div>
-        </div>
-        <!-- КОНЕЦ слайд  -->
+<body class="page">
+  <div class="page__header">
+    <header class="header">
+      <!-- Контент шапки -->
+      <div class="wrapper">
+        <div class="header__grid">
+          <div class="header__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="251" height="23" fill="none">
+              <path fill="#99BD3D"
+                d="M9.33.64c2.08 0 3.94.47 5.58 1.41a9.94 9.94 0 0 1 3.9 3.87c.94 1.64 1.41 3.5 1.41 5.58s-.47 3.95-1.41 5.61a10.21 10.21 0 0 1-3.9 3.87c-1.64.92-3.5 1.38-5.58 1.38-1.86 0-3.54-.32-5.04-.96a9.725 9.725 0 0 1-3.72-2.79l3.09-2.88c1.48 1.66 3.29 2.49 5.43 2.49 1.54 0 2.84-.45 3.9-1.35 1.08-.9 1.78-2.11 2.1-3.63H6.57V9.52h8.46c-.34-1.44-1.04-2.59-2.1-3.45-1.06-.86-2.34-1.29-3.84-1.29-2.14 0-3.95.83-5.43 2.49L.57 4.39c1-1.22 2.24-2.15 3.72-2.79C5.79.96 7.47.64 9.33.64Zm24.326 12.9h-3.36V22h-4.83V1h4.83v8.49h3.48L39.296 1h5.13l-6.87 10.14L44.636 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84Z"
+                class="first" />
+              <path fill="#fff"
+                d="M83.209 13.54h-3.36V22h-4.83V1h4.83v8.49h3.48L88.849 1h5.13l-6.87 10.14L94.189 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM143.741 22l-.03-12.57-6.18 10.35h-2.16l-6.18-10.11V22h-4.56V1h4.02l7.86 13.05L144.251 1h4.02l.03 21h-4.56Zm36.147-10.56c0 2.78-.95 4.97-2.85 6.57-1.88 1.58-4.59 2.46-8.13 2.64v2.28h-4.47v-2.31c-3.56-.2-6.29-1.09-8.19-2.67-1.88-1.6-2.82-3.77-2.82-6.51 0-2.76.94-4.92 2.82-6.48 1.9-1.58 4.63-2.48 8.19-2.7V.1h4.47v2.13c3.54.2 6.25 1.1 8.13 2.7 1.9 1.6 2.85 3.77 2.85 6.51Zm-10.98 5.4c2.12-.2 3.7-.74 4.74-1.62 1.04-.9 1.56-2.17 1.56-3.81 0-3.2-2.1-4.98-6.3-5.34v10.77Zm-10.77-5.4c0 3.16 2.1 4.96 6.3 5.4V6.07c-2.14.2-3.73.74-4.77 1.62-1.02.86-1.53 2.11-1.53 3.75Zm36.906 10.92c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM220.868 1c1.86 0 3.47.31 4.83.93 1.38.62 2.44 1.5 3.18 2.64.74 1.14 1.11 2.49 1.11 4.05 0 1.54-.37 2.89-1.11 4.05-.74 1.14-1.8 2.02-3.18 2.64-1.36.6-2.97.9-4.83.9h-4.23V22h-4.86V1h9.09Zm-.27 11.25c1.46 0 2.57-.31 3.33-.93.76-.64 1.14-1.54 1.14-2.7 0-1.18-.38-2.08-1.14-2.7-.76-.64-1.87-.96-3.33-.96h-3.96v7.29h3.96Zm29.56-7.29h-6.72V22h-4.8V4.96h-6.69V1h18.21v3.96Z"
+                class="last" />
+            </svg>
 
-        <!-- слайд  -->
-        <div class="first-screen__slide swiper-slide">
-          <div class="wrapper">
-            <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image">
-            <div class="first-screen__details">
-              <div class="first-screen__header">
-                <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
-                <h3 class="first-screen__name">Резиновая плитка</h3>
-              </div>
-              <ul class="first-screen__advantages-list">
-                <li class="first-screen__advantages-item icon-1">Нескользящая поверхность,
-                  даже если она мокрая - не скользит</li>
-                <li class="first-screen__advantages-item icon-2">Амортизирует удары
-                  и предотвращает травмы</li>
-                <li class="first-screen__advantages-item icon-3">В 10 раз менее подвержена нагреву солнца чем бетон или
-                  асфальт</li>
-                <li class="first-screen__advantages-item icon-4">На 100% состоит из переработанной резины</li>
-              </ul>
-              <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
-            </div>
+            <p class="header__text">Производство покрытий из резиновой крошки</p>
           </div>
-        </div>
-        <!-- КОНЕЦ слайд  -->
 
-        <!-- слайд  -->
-        <div class="first-screen__slide swiper-slide">
-          <div class="wrapper">
-            <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image">
-            <div class="first-screen__details">
-              <div class="first-screen__header">
-                <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
-                <h3 class="first-screen__name">Резиновая плитка</h3>
+          <ul class="header__contacts">
+            <li>Звоните, обсудим:<a class="phone" href="tel:84951980228">8 (495) 198 02 28</a></li>
+            <li>Вопросы и предложения:<a class="mail" href="mailto:ecocomfort@yandex.ru">ecocomfort@yandex.ru</a></li>
+          </ul>
+
+          <div class="header__buttons">
+            <a href="#" class="header__callback button" data-dialog-button="modal-2"><span class="decorate"></span><span>Заказать звонок</span></a>
+
+            <button class="menu-button" type="button">
+              <svg width="50" height="50" viewBox="0 0 100 100">
+                <path class="line line1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <!-- навигация  -->
+    <nav class="main-navigation">
+      <div class="wrapper">
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Главная</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Каталог</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Услуги</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Цены</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">О компании</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <main class="page__body">
+    <section class="first-screen">
+      <!-- Контент первого экрана -->
+      <div class="first-screen__slider swiper">
+        <div class="swiper-wrapper">
+          <!-- слайд  -->
+          <div class="first-screen__slide swiper-slide">
+            <div class="wrapper">
+              <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image">
+              <div class="first-screen__details">
+                <div class="first-screen__header">
+                  <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
+                  <h3 class="first-screen__name">Резиновая плитка</h3>
+                </div>
+                <ul class="first-screen__advantages-list">
+                  <li class="first-screen__advantages-item icon-1">Нескользящая поверхность,
+                    даже если она мокрая - не скользит</li>
+                  <li class="first-screen__advantages-item icon-2">Амортизирует удары
+                    и предотвращает травмы</li>
+                  <li class="first-screen__advantages-item icon-3">В 10 раз менее подвержена нагреву солнца чем бетон
+                    или
+                    асфальт</li>
+                  <li class="first-screen__advantages-item icon-4">На 100% состоит из переработанной резины</li>
+                </ul>
+                <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
               </div>
-              
-              <ul class="first-screen__advantages-list">
-                <li class="first-screen__advantages-item icon-1">Нескользящая поверхность,
-                  даже если она мокрая - не скользит</li>
-                <li class="first-screen__advantages-item icon-2">Амортизирует удары
-                  и предотвращает травмы</li>
-                <li class="first-screen__advantages-item icon-3">В 10 раз менее подвержена нагреву солнца чем бетон или
-                  асфальт</li>
-                <li class="first-screen__advantages-item icon-4">На 100% состоит из переработанной резины</li>
-              </ul>
-              <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
             </div>
           </div>
+          <!-- КОНЕЦ слайд  -->
+
+          <!-- слайд  -->
+          <div class="first-screen__slide swiper-slide">
+            <div class="wrapper">
+              <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image">
+              <div class="first-screen__details">
+                <div class="first-screen__header">
+                  <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
+                  <h3 class="first-screen__name">Резиновая плитка</h3>
+                </div>
+                <ul class="first-screen__advantages-list">
+                  <li class="first-screen__advantages-item icon-1">Нескользящая поверхность,
+                    даже если она мокрая - не скользит</li>
+                  <li class="first-screen__advantages-item icon-2">Амортизирует удары
+                    и предотвращает травмы</li>
+                  <li class="first-screen__advantages-item icon-3">В 10 раз менее подвержена нагреву солнца чем бетон
+                    или
+                    асфальт</li>
+                  <li class="first-screen__advantages-item icon-4">На 100% состоит из переработанной резины</li>
+                </ul>
+                <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- КОНЕЦ слайд  -->
+
+          <!-- слайд  -->
+          <div class="first-screen__slide swiper-slide">
+            <div class="wrapper">
+              <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image">
+              <div class="first-screen__details">
+                <div class="first-screen__header">
+                  <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
+                  <h3 class="first-screen__name">Резиновая плитка</h3>
+                </div>
+                <ul class="first-screen__advantages-list">
+                  <li class="first-screen__advantages-item icon-1">Нескользящая поверхность,
+                    даже если она мокрая - не скользит</li>
+                  <li class="first-screen__advantages-item icon-2">Амортизирует удары
+                    и предотвращает травмы</li>
+                  <li class="first-screen__advantages-item icon-3">В 10 раз менее подвержена нагреву солнца чем бетон
+                    или
+                    асфальт</li>
+                  <li class="first-screen__advantages-item icon-4">На 100% состоит из переработанной резины</li>
+                </ul>
+                <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- КОНЕЦ слайд  -->
+
+          <!-- слайд  -->
+          <div class="first-screen__slide swiper-slide">
+            <div class="wrapper">
+              <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image">
+              <div class="first-screen__details">
+                <div class="first-screen__header">
+                  <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
+                  <h3 class="first-screen__name">Резиновая плитка</h3>
+                </div>
+
+                <ul class="first-screen__advantages-list">
+                  <li class="first-screen__advantages-item icon-1">Нескользящая поверхность,
+                    даже если она мокрая - не скользит</li>
+                  <li class="first-screen__advantages-item icon-2">Амортизирует удары
+                    и предотвращает травмы</li>
+                  <li class="first-screen__advantages-item icon-3">В 10 раз менее подвержена нагреву солнца чем бетон
+                    или
+                    асфальт</li>
+                  <li class="first-screen__advantages-item icon-4">На 100% состоит из переработанной резины</li>
+                </ul>
+                <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- КОНЕЦ слайд  -->
+
         </div>
-        <!-- КОНЕЦ слайд  -->
+        <div class="first-screen__pagination wrapper">
+          <div class="swiper-pagination"></div>
+        </div>
 
       </div>
-      <div class="first-screen__pagination wrapper">
-        <div class="swiper-pagination"></div>
+    </section>
+
+    <section class="widgets">
+      <!-- Контент блока с виджетами -->
+    </section>
+
+    <section class="advantages">
+      <!-- Контент преимуществ -->
+    </section>
+
+    <section class="catalog-announcements">
+      <!-- Контент анонсов каталога -->
+    </section>
+
+    <section class="partners">
+      <!-- Контент раздела наши партнёры -->
+    </section>
+
+    <section class="related-products-slider">
+      <!-- Контент слайдера с сопутствующими товарами -->
+    </section>
+
+    <section class="order-steps">
+      <!-- Контент шагов оформления заказа -->
+    </section>
+
+    <section class="online-consultation">
+      <!-- Контент онлайн консультации -->
+    </section>
+
+    <section class="licenses-slider">
+      <!-- Контент слайдера с лицензиями и сертификатами -->
+    </section>
+
+    <section class="portfolio">
+      <!-- Контент портфолио работ в виде фотогалереи -->
+    </section>
+
+    <section class="delivery">
+      <!-- Контент доставки заказа -->
+    </section>
+
+    <section class="production-gallery">
+      <!-- Контент фотогалереи нашего производства -->
+    </section>
+
+    <section class="online-consultation">
+      <!-- Контент онлайн консультации -->
+    </section>
+  </main>
+
+
+
+  <footer class="page__footer footer">
+    <!-- Контент подвала сайта -->
+  </footer>
+
+  <div class="overlay" title="Кликните если хотите закрыть диалоговое окно"></div>
+
+  <!-- Диалоговые окна -->
+  <!-- Задать вопрос -->
+  <section class="modal" data-dialog-modal="modal-2">
+    <form action="javascript:void(0);" method="post">
+      <div class="modal__wrapper">
+
+        <!-- шапка диалогового окна -->
+        <div class="modal__header">
+          <h2 class="title">Заказать звонок</h2>
+          <p class="subtitle">Заполните простую форму. Наши специалисты свяжутся с вами в ближайшее время.</p>
+        </div>
+        <!-- КОНЕЦ шапка диалогового окна -->
+
+        <!-- тело диалогового окна  -->
+        <div class="modal__body">
+          <div class="modal__grid">
+          <div class="modal__form-item">
+            <label for="question-form-tel">ФИО:</label>
+            <input id="question-form-tel" type="text" placeholder="Введите имя">
+          </div>
+
+          <div class="modal__form-item">
+            <label for="question-form-name">Телефон:</label>
+            <input id="question-form-name" type="tel" placeholder="Введите телефон" required>
+          </div>
+
+          <div class="modal__form-item">
+            <label for="question-form-email">E-mail:</label>
+            <input id="question-form-email" type="text" placeholder="Для ответа">
+          </div>
+
+          <div class="modal__form-item modal__form-item--textarea">
+            <label for="question-form-texarea">Сообщение:</label>
+            <textarea id="question-form-texarea" cols="30" rows="10" placeholder="Введите Ваш вопрос или сообщение"></textarea>
+          </div>
+        </div>
+
+        </div>
+        <!-- КОНЕЦ тело диалогового окна  -->
+
+        <!-- Подвал диалогового окна -->
+        <div class="modal__footer">
+          <div class="modal__form-item--check">
+            <input class="visually-hidden" type="checkbox" name="user-consent" id="promo-form-consent" checked>
+            <label for="promo-form-consent">Я согласен с условиями обработки <a href="#" target="_blank">персональных
+                данных</a></label>
+          </div>
+
+          <button class="button" type="submit">
+            <span>Отправить</span>
+            <span class="decorate"></span>
+          </button>
+        </div>
+        <!-- КОНЕЦ Подвал диалогового окна -->
+
+        <!-- кнопка закрытия диалогового окна -->
+        <!-- класс close-btn - обязателен!  -->
+        <button class="button button--icon close-btn" type="button">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 1L1 21" stroke="white" stroke-width="2"/>
+            <path d="M21 21L1 0.999999" stroke="white" stroke-width="2"/>
+            </svg>
+          <span class="decorate"></span>
+        </button>
+        <!-- КОНЕЦ кнопка закрытия диалогового окна -->
       </div>
-      
-    </div>
+
+    </form>
   </section>
-
-  <section class="widgets">
-    <!-- Контент блока с виджетами -->
-  </section>
-
-  <section class="advantages">
-    <!-- Контент преимуществ -->
-  </section>
-
-  <section class="catalog-announcements">
-    <!-- Контент анонсов каталога -->
-  </section>
-
-  <section class="partners">
-    <!-- Контент раздела наши партнёры -->
-  </section>
-
-  <section class="related-products-slider">
-    <!-- Контент слайдера с сопутствующими товарами -->
-  </section>
-
-  <section class="order-steps">
-    <!-- Контент шагов оформления заказа -->
-  </section>
-
-  <section class="online-consultation">
-    <!-- Контент онлайн консультации -->
-  </section>
-
-  <section class="licenses-slider">
-    <!-- Контент слайдера с лицензиями и сертификатами -->
-  </section>
-
-  <section class="portfolio">
-    <!-- Контент портфолио работ в виде фотогалереи -->
-  </section>
-
-  <section class="delivery">
-    <!-- Контент доставки заказа -->
-  </section>
-
-  <section class="production-gallery">
-    <!-- Контент фотогалереи нашего производства -->
-  </section>
-
-  <section class="online-consultation">
-    <!-- Контент онлайн консультации -->
-  </section>
-</main>
+  <!-- КОНЕЦ Диалоговые окна  -->
 
 
-
-<footer class="footer">
-  <!-- Контент подвала сайта -->
-</footer>
-
-<body>
   <!-- подключаем скрипты и js-файлы библиотек -->
   <script src="libs/swiper-bundle.min.js"></script>
   <script src="js/modules.js"></script>

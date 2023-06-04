@@ -1,0 +1,17 @@
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #99BD3D;
+  opacity: 1;
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:hover,
+  &:hover {
+    background-color: #436F68;
+  }
+
+  &-active {
+    background-color: #ffffff;
+  }
+}
