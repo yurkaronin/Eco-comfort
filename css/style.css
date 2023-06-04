@@ -207,6 +207,41 @@ input[type=radio].visually-hidden {
   stroke-width: 6;
 }
 
+.title {
+  display: block;
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  text-align: center;
+  color: #7A7A7A;
+  margin-bottom: 50px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+.section {
+  padding: 85px 0 70px;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 45px 0 50px;
+  }
+}
 .overlay {
   width: 100%;
   height: 100%;
@@ -625,6 +660,82 @@ input[type=radio].visually-hidden {
   color: #ffffff;
 }
 
+.widgets__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.widgets__item {
+  min-height: 100%;
+}
+.widgets__icon {
+  border-radius: 50%;
+  background-color: #99BD3D;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+.widgets__title {
+  margin: 0;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #616161;
+}
+.widgets__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #616161;
+  max-width: 400px;
+}
+.widgets__link {
+  display: block;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px rgba(70, 70, 70, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  transition: top ease 0.5s;
+  top: 0;
+  position: relative;
+  min-height: 100%;
+}
+.widgets__link:hover, .widgets__link:active, .widgets__link:focus {
+  top: -12px;
+}
+.widgets__link:hover .widgets__icon, .widgets__link:active .widgets__icon, .widgets__link:focus .widgets__icon {
+  background-color: #436F68;
+}
+
+@media (max-width: 768px) {
+  .widgets__list {
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .widgets__link {
+    top: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  .widgets__link {
+    gap: 16px;
+    padding: 20px;
+  }
+}
 .modal {
   position: fixed;
   top: 50%;
