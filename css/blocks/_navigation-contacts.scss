@@ -1,0 +1,42 @@
+.navigation-contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 220px));
+
+  a {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 15px 1fr;
+    align-items: center;
+    font-weight: 700;
+    transition: color 0.3s;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 15px;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+
+    &.phone::before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none'%3e%3cpath fill='%2399BD3D' d='M8.01 4.667H6.564v1.555h1.444V4.667Zm2.888 0H9.454v1.555h1.444V4.667Zm2.167 5.055c-.9 0-1.766-.155-2.578-.443a.689.689 0 0 0-.733.19l-1.59 1.715C6.117 10.061 4.45 8.268 3.406 6.063l1.589-1.715a.823.823 0 0 0 .177-.79 9.524 9.524 0 0 1-.412-2.78C4.76.346 4.438 0 4.037 0H1.51c-.4 0-.722.346-.722.778C.787 8.08 6.283 14 13.065 14c.4 0 .722-.346.722-.778V10.5c0-.432-.321-.778-.722-.778Zm-.722-5.055v1.555h1.444V4.667h-1.444Z'/%3e%3c/svg%3e");
+    }
+
+    &.mail::before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='13' fill='none'%3e%3cpath fill='%2399BD3D' d='M13.899 0H3.101A2.314 2.314 0 0 0 .787 2.314v7.713a2.314 2.314 0 0 0 2.314 2.314h10.798a2.314 2.314 0 0 0 2.314-2.314V2.314A2.314 2.314 0 0 0 13.899 0Zm0 1.543L8.886 4.99a.771.771 0 0 1-.772 0L3.101 1.543h10.798Z'/%3e%3c/svg%3e");
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #99BD3D;
+
+    }
+  }
+}

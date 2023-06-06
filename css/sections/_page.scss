@@ -2,9 +2,11 @@
   &__header {
     width: 100%;
     max-width: 100%;
-    position: absolute;
-    z-index: 11;
+    position: fixed;
+    z-index: 99;
     transition: all 0.3s;
     color: #ffffff;
+    pointer-events: none;
+
   }
 }

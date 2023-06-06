@@ -66,11 +66,13 @@
       content: '';
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='29' height='56' fill='none'%3e%3cpath fill='%23fff' d='M0 56 29 0v56H0Z'/%3e%3c/svg%3e");
       display: block;
+      background-repeat: no-repeat;
       width: 30px;
       height: 100%;
       position: absolute;
       bottom: 0;
       left: -16px;
+      background-position: bottom;
     }
   }
 
@@ -89,7 +91,7 @@
     list-style: none;
     display: grid;
     gap: 30px 50px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-bottom: 70px;
   }
 
@@ -129,59 +131,74 @@
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='58' height='56' fill='none'%3e%3cpath stroke='%23fff' stroke-miterlimit='10' stroke-width='2' d='M29.22 44.103c7.854 0 14.22-6.363 14.22-14.213 0-7.85-6.366-14.214-14.22-14.214C21.367 15.676 15 22.04 15 29.89c0 7.85 6.367 14.213 14.22 14.213Z'/%3e%3cpath stroke='%23fff' stroke-miterlimit='10' stroke-width='2' d='M40.005 29.893a10.786 10.786 0 0 1-6.66 9.975 10.801 10.801 0 0 1-11.77-2.338 10.79 10.79 0 0 1 7.646-18.42 10.788 10.788 0 0 1 9.964 6.657c.542 1.308.821 2.71.82 4.126Z'/%3e%3cpath stroke='%23fff' stroke-miterlimit='10' stroke-width='2' d='M29.22 36.526a6.638 6.638 0 0 0 6.64-6.636 6.638 6.638 0 0 0-6.64-6.637 6.638 6.638 0 0 0-6.64 6.637 6.638 6.638 0 0 0 6.64 6.636ZM31.02 15.788l-2.912 3.35M40.292 21.187l-4.43.277M38.045 41.002l-.206-4.433M43.402 31.624l-3.351-2.91M27.538 43.857l3.065-3.212M18.391 38.866l4.44-.071M20.928 18.39l.001 4.438M15.135 28.28l3.212 3.063M48.955 23.683 39.17 6.741c-4.422-7.655-15.476-7.655-19.899 0l-4.17 7.22M25.764 51.256h19.22c8.844 0 14.371-9.568 9.95-17.22l-3.587-6.208'/%3e%3cpath fill='%23fff' stroke='%23fff' d='m29.283 54.756.673-.626-3.554-2.873 3.554-2.874-.673-.627-4.327 3.501 4.327 3.5ZM50.866 19.929l-.879-.273-.726 4.512-4.26-1.655-.21.895 5.19 2.014.885-5.493ZM8.407 18.398l.206.896 4.264-1.642.713 4.515.879-.27L13.6 16.4l-5.194 1.998Z'/%3e%3cpath stroke='%23fff' stroke-miterlimit='10' stroke-width='2' d='M12.511 18.445 3.508 34.033c-4.423 7.655 1.109 17.22 9.948 17.22h7.371'/%3e%3c/svg%3e");
     }
   }
-}
 
-@media (max-width: 1024px) {
-  .first-screen__name {
-    font-size: 60px;
+  @media (max-width: 1024px) {
+    &__name {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &__advantages-item {
+      gap: 16px;
+      font-size: 16px;
+    }
+
+    &__advantages-list {
+      margin-bottom: 50px;
+    }
+
+    &__price {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+      color: #8bc04d;
+      padding: 0;
+      margin: initial;
+      box-shadow: none;
+      border-radius: initial;
+      background-color: transparent;
+      margin-bottom: 48px;
+
+      &::before {
+        display: none;
+      }
+
+    }
+
+    &__slide {
+      height: initial;
+      min-height: initial;
+      padding: 80px 0;
+    }
+
+    &__price::before {
+      height: 72%;
+      left: -10px;
+    }
+
   }
 
-  .first-screen__advantages-item {
-    font-size: 16px;
+  @media (max-width: 768px) {
+    &__advantages-list {
+      margin-bottom: 40px;
+    }
+
+    &__advantages-item {
+      align-items: center;
+      max-width: 375px;
+      font-size: 16px;
+      font-weight: 500;
+    }
   }
 
-  .first-screen__advantages-item {
-    gap: 16px;
-  }
-
-  .first-screen__advantages-list {
-    gap: 24px;
-  }
-
-  .first-screen__advantages-list {
-    margin-bottom: 50px;
-  }
-
-  .first-screen__price {
-    font-size: 20px;
-    line-height: 1;
-  }
-
-  .first-screen__slide {
-    height: initial;
-    min-height: initial;
-    padding: 80px 0;
-  }
-
-}
-
-@media (max-width: 768px) {
-  .first-screen__advantages-list {
-    gap: 24px;
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 40px;
-  }
-
-  .first-screen__advantages-item {
-    align-items: center;
-    max-width: 375px;
-    font-size: 16px;
-    font-weight: 500;
-  }
-}
-
-@media (max-width: 425px) {
-  .first-screen__name {
-    font-size: 47px;
+  @media (max-width: 425px) {
+    &__name {
+      font-size: 47px;
+    }
   }
 }

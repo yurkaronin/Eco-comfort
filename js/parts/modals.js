@@ -1,34 +1,37 @@
 const dialogButtons = document.querySelectorAll('[data-dialog-button]');
 const overlay = document.querySelector('.overlay');
 
-if (dialogButtons && overlay) {
-  const modals = document.querySelectorAll('.modal');
+let activeModal = null;
+
+if (dialogButtons.length > 0) {
   const closeButtons = document.querySelectorAll('.close-btn');
 
   dialogButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
       const dialogId = button.getAttribute('data-dialog-button');
-      const dialog = document.querySelector(`[data-dialog-modal='${dialogId}']`);
-      document.body.style.overflow = 'hidden';
-      dialog.classList.add('modal-show');
-      overlay.classList.add('show');
+      activeModal = document.querySelector(`[data-dialog-modal='${dialogId}']`);
+      if (activeModal) {
+        document.body.classList.add('modal-show');
+      }
     });
   });
 
-  overlay.addEventListener('click', () => {
-    modals.forEach(modal => {
-      modal.classList.remove('modal-show');
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      if (activeModal) {
+        document.body.classList.remove('modal-show');
+        activeModal = null;
+      }
     });
-    overlay.classList.remove('show');
-    document.body.style.overflow = 'auto';
-  });
+  }
 
   closeButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const modal = button.closest('.modal');
-      document.body.style.overflow = 'auto';
-      modal.classList.remove('modal-show');
-      overlay.classList.remove('show');
+      if (activeModal) {
+        document.body.classList.remove('modal-show');
+        activeModal = null;
+      }
     });
   });
-};
+}

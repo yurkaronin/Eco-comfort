@@ -1,0 +1,39 @@
+.catalog-card {
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px rgba(70, 70, 70, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+
+  &__header {
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    padding: 30px 45px 55px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #616161;
+  }
+
+  &__name {
+    margin-top: 0;
+    font-weight: 500;
+  }
+  &__text {
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  &__price {
+    display: block;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #99BD3D;
+    margin-bottom: 32px;
+  }
+}

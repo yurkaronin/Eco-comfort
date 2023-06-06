@@ -9,17 +9,13 @@
   margin-bottom: 50px;
   max-width: max-content;
   margin-inline: auto;
-}
 
-@media (max-width: 1024px) {
-  .title {
+  @media (max-width: 1024px) {
     font-size: 32px;
     margin-bottom: 32px;
   }
-}
 
-@media (max-width: 600px) {
-  .title {
+  @media (max-width: 600px) {
     font-size: 24px;
     margin-bottom: 24px;
   }

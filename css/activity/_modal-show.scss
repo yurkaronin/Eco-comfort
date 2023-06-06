@@ -1,0 +1,10 @@
+.modal-show {
+  .modal {
+    display: block;
+    animation: bounce 0.6s;
+  }
+  .overlay {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}

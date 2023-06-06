@@ -9,6 +9,8 @@
 @import "blocks/title";
 @import "blocks/section";
 @import "blocks/overlay";
+@import "blocks/catalog-card";
+@import "blocks/navigation-contacts";
 
 
 @import "sections/header";
@@ -18,5 +20,7 @@
 @import "sections/widgets";
 @import "sections/modal";
 @import "sections/advantages";
+@import "sections/catalog";
 
 @import "activity/menu-open";
+@import "activity/modal-show";

@@ -1,4 +1,5 @@
 .main-navigation {
+  pointer-events: initial;
   opacity: 0;
   position: relative;
   transition-duration: 0.3s;
@@ -8,6 +9,8 @@
   pointer-events: none;
   visibility: hidden;
   z-index: 2;
+  visibility: hidden;
+  pointer-events: none;
 
   &::before {
     content: '';
@@ -69,60 +72,76 @@
     }
   }
 
-  &__contacts {
+  .navigation-contacts {
     display: none;
 
   }
+
   &__callback {
     display: none;
   }
-}
 
-@media (max-width: 768px) {
-  .main-navigation .wrapper {
-    padding-inline: 0;
-  }
+  @media (max-width: 768px) {
+    top: initial;
+    left: -100%;
 
-  .main-navigation__list {
-    gap: 0;
-    grid-template-columns: 1fr;
-  }
+    .wrapper {
+      padding-inline: 0;
+    }
 
-  .main-navigation__link {
-    padding: 20px;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-  }
+    &__list {
+      gap: 0;
+      grid-template-columns: 1fr;
+    }
 
-  .main-navigation__contacts {
-    display: grid;
-    gap: 0;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
+    &__link {
+      padding: 20px;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+    }
 
-    li {
+    .navigation-contacts {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      font-size: 20px;
+      max-width: max-content;
+      text-align: center;
+
+      a {
+        margin: 0 auto;
+        max-width: max-content;
+      }
+    }
+
+    &__item {
       padding: 10px 20px;
       font-weight: 700;
       font-size: 20px;
       text-align: center;
       margin: 0 auto;
+      transition: color 0.1s;
+    }
+
+    &__callback {
+      display: block;
+      max-width: max-content;
+      margin: 16px auto;
+      color: #fff !important;
+      text-shadow: none;
+      padding: 20px 24px;
+      margin-bottom: 64px;
+    }
+
+    &::after,
+    &::before {
+      display: none;
     }
   }
-  .main-navigation__callback {
-    display: block;
-    max-width: max-content;
-    margin: 16px auto;
-    color: #fff !important;
-    text-shadow: none;
-    padding: 20px 24px;
-    margin-bottom: 64px;
-  }
-  .main-navigation::after,
-  .main-navigation::before {
-    display: none;
-  }
+
+
 }
