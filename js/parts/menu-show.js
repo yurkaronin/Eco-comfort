@@ -1,9 +1,24 @@
+// Этот скрипт отслеживает клик по элементу с классом .menu-button (обычно это кнопка для открытия навигационного меню) и переключает классы isActive и menu-open для разных элементов, обеспечивая функциональность открытия и закрытия навигационного меню.
+
+// Инициализация переменной, которая хранит кнопку меню.
 const buttonMenu = document.querySelector('.menu-button');
-const headerMobile = document.querySelector('.main-navigation');
 
+// Инициализация переменной, которая хранит навигационное меню.
+const mainNavigation = document.querySelector('.main-navigation');
+
+// Добавление обработчика событий на кнопку меню.
 buttonMenu.addEventListener('click', function () {
+  // Переключение класса 'isActive' на кнопке меню.
+  // Если класс присутствует - он будет удалён, если отсутствует - добавлен.
   buttonMenu.classList.toggle('isActive');
-  headerMobile.classList.toggle('isActive');
-  document.body.classList.toggle('menu-open');
 
+  // То же самое делаем для навигационного меню.
+  mainNavigation.classList.toggle('isActive');
+
+  // И для body переключаем класс 'menu-open'.
+  // Этот класс может быть использован для изменения стилей основного контента страницы
+  // или блокировки прокрутки при открытом меню.
+  document.body.classList.toggle('menu-open');
 });
+
+// В общем, этот код обеспечивает интерактивность навигационного меню: при клике на кнопку меню, меню открывается или закрывается, и основное содержимое страницы может изменять свои стили в зависимости от состояния меню.

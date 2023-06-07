@@ -1,31 +1,48 @@
+// Этот код отвечает за изменение класса у body, в зависимости от положения скролла страницы.
+// Он использует requestAnimationFrame для оптимизации производительности и того что бы избежать эффекта "заикания" при прокрутке.
+
+// Инициализируем переменную, которая хранит последнее известное положение прокрутки.
 let lastKnownScrollY = 0;
+
+// Инициализируем переменную, которая хранит информацию о том, запрашивается ли в данный момент обновление кадра.
 let ticking = false;
 
+// Функция, которая добавляет или убирает класс 'header-sticky' у элемента body, в зависимости от положения прокрутки.
 function headerChange() {
+  // Получаем текущую позицию прокрутки.
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Если прокрутка больше чем 160 пикселей, то добавляем класс 'header-sticky' к body.
+  // Если меньше, то удаляем этот класс.
   if (scrollTop > 160) {
-    document.body.classList.add('header-sticky');
+    document.body.classList.add("header-sticky");
   } else {
-    document.body.classList.remove('header-sticky');
+    document.body.classList.remove("header-sticky");
   }
+
+  // Сбрасываем состояние ticking, т.к. мы только что обработали текущее обновление.
   ticking = false;
 }
 
+// Функция, которая запускается при событии прокрутки страницы.
 function onScroll() {
+  // Запоминаем текущую позицию прокрутки.
   lastKnownScrollY = window.scrollY;
+
+  // Запрашиваем обновление кадра, чтобы обработать текущую позицию прокрутки.
   requestTick();
 }
 
+// Функция, которая запрашивает обновление кадра.
 function requestTick() {
+  // Если обновление кадра еще не запрошено, то мы запрашиваем его.
   if (!ticking) {
     requestAnimationFrame(headerChange);
   }
+
+  // Устанавливаем ticking в true, чтобы показать, что обновление кадра запрошено.
   ticking = true;
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  // Проверяем состояние прокрутки страницы. если прокрутка есть - перекрашиваем шапку
-  headerChange();
-  // Отслеживаем событие прокрутки страницы > модификация шапки
-  window.addEventListener('scroll', onScroll, { passive: true });
-});
+// Примечание: requestAnimationFrame является веб API, который сообщает браузеру, что вы хотите выполнить анимацию и просит его запланировать обновление кадра перед следующей перерисовкой.
+// Это обеспечивает более плавную анимацию по сравнению с setTimeout или setInterval, потому что он синхронизирован с обновлением кадра браузера.
