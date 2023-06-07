@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   includeFiles("./js/parts/sliders.js");
   includeFiles("./js/parts/menu-show.js");
   includeFiles("./js/parts/modals.js");
+  includeFiles("./js/parts/header-sticky.js");
 
 });
 
