@@ -1,5 +1,11 @@
 .section {
   padding: 85px 0 70px;
+  &__header {
+    margin-bottom: 50px;
+    .title {
+      margin-bottom: 30px;
+    }
+  }
 
   @media (max-width: 1200px) {
     padding: 45px 0 50px;

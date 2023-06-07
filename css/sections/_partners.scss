@@ -1,0 +1,36 @@
+.partners {
+  max-width: 100%;
+  overflow: hidden;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper {
+    overflow: initial;
+  }
+  .swiper-wrapper {
+    align-items: stretch;
+    margin-bottom: 32px;
+  }
+  .swiper-slide {
+    height: 100%;
+  }
+  .swiper-pagination {
+    position: initial;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    box-shadow: 0px 15px 30px rgba(70, 70, 70, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  &__logo {
+    height: 70px;
+  }
+}

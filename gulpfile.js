@@ -17,5 +17,10 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest('./js/'));
 });
 
+// Отслеживание изменений
+gulp.task('watch', function () {
+  gulp.watch('./js/parts/*.js', gulp.series('scripts'));
+});
 
-gulp.task('default', gulp.series('scripts')); // задача по умолчанию, которая будет выполняться при запуске команды gulp
+
+gulp.task('default', gulp.series('scripts', 'watch')); // задача по умолчанию, которая будет выполняться при запуске команды gulp
