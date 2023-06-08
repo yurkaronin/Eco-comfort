@@ -1,0 +1,26 @@
+.phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  color: #616161;
+  transition: color 0.3s;
+
+  &::before {
+    content: "";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='28' height='30' fill='none'%3e%3cpath fill='%2399BD3D' d='M15.556 10h-3.112v3.333h3.112V10Zm6.222 0h-3.111v3.333h3.11V10Zm4.666 10.833c-1.936 0-3.803-.333-5.553-.95a1.488 1.488 0 0 0-1.579.409l-3.422 3.675c-4.412-2.408-8-6.25-10.251-10.975L9.06 9.317a1.758 1.758 0 0 0 .381-1.692 20.311 20.311 0 0 1-.886-5.958C8.556.742 7.863 0 7 0H1.556C.692 0 0 .742 0 1.667 0 17.317 11.838 30 26.444 30c.864 0 1.556-.742 1.556-1.667V22.5c0-.925-.692-1.667-1.556-1.667ZM24.89 10v3.333H28V10h-3.111Z'/%3e%3c/svg%3e");
+    display: block;
+    width: 28px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin-right: 16px;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: #99bd3d;
+  }
+}
