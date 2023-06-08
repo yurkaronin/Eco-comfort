@@ -1119,6 +1119,7 @@ input[type=checkbox]:checked + label::before {
 
 .order-steps {
   overflow: hidden;
+  padding-top: 0;
 }
 .order-steps__grid {
   display: grid;
@@ -1210,6 +1211,29 @@ input[type=checkbox]:checked + label::before {
   margin-bottom: 75px;
   margin-right: auto;
   margin-left: 0;
+}
+@media (max-width: 1200px) {
+  .order-steps__grid {
+    grid-template-columns: 1fr;
+  }
+  .order-steps__photo {
+    height: initial;
+  }
+  .order-steps__photo img {
+    max-width: initial;
+    height: initial;
+    -o-object-fit: initial;
+       object-fit: initial;
+    overflow: initial;
+    transform: none;
+    overflow: hidden;
+  }
+  .order-steps__photo {
+    grid-row-start: 1;
+  }
+  .order-steps .title {
+    margin-bottom: 32px;
+  }
 }
 
 .menu-open .page__header {
