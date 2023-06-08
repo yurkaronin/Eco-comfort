@@ -1,0 +1,23 @@
+.licenses-slider {
+  .swiper-wrapper {
+    align-items: stretch;
+    margin-bottom: 32px;
+  }
+
+  .swiper-pagination {
+    position: initial;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+  &__text {
+    margin-top: 6px;
+    margin-inline: 12px;
+  }
+  &__link {
+    // width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

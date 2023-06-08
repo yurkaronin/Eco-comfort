@@ -1359,6 +1359,25 @@ input[type=checkbox]:checked + label::before {
   }
 }
 
+.licenses-slider .swiper-wrapper {
+  align-items: stretch;
+  margin-bottom: 32px;
+}
+.licenses-slider .swiper-pagination {
+  position: initial;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 0 auto;
+}
+.licenses-slider__text {
+  margin-top: 6px;
+  margin-inline: 12px;
+}
+.licenses-slider__link img {
+  display: block;
+  width: 100%;
+}
+
 .menu-open .page__header {
   background-color: #fff;
   color: #7a7a7a;

@@ -234,3 +234,37 @@ if (document.querySelector(".partners__slider")) {
     },
   });
 }
+
+if (document.querySelector(".licenses-slider .swiper")) {
+  var swiper = new Swiper(".licenses-slider .swiper", {
+    // slidesPerView: 4,
+    // spaceBetween: 32,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+      el: ".licenses-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 16,
+      },
+      450: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      // when window width is >= 480px
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      // when window width is >= 640px
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+    },
+  });
+}
