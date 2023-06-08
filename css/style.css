@@ -1299,6 +1299,19 @@ input[type=checkbox]:checked + label::before {
   position: absolute;
   top: -85px;
   left: 0;
+  display: block;
+}
+.online-consultation--mod .online-consultation__center {
+  display: flex;
+  justify-content: center;
+}
+.online-consultation--mod .online-consultation__center img {
+  top: initial;
+  left: initial;
+  bottom: -70px;
+}
+.online-consultation--mod .online-consultation__right {
+  margin-left: auto;
 }
 @media (max-width: 1360px) {
   .online-consultation__grid {
@@ -1327,13 +1340,22 @@ input[type=checkbox]:checked + label::before {
     position: initial;
     width: 100%;
   }
+  .online-consultation--mod .online-consultation__right {
+    margin-left: initial;
+  }
+  .online-consultation--mod .online-consultation__center {
+    width: 280px;
+  }
+  .online-consultation--mod .online-consultation__grid {
+    grid-template-columns: 1fr 280px;
+  }
 }
 @media (max-width: 768px) {
   .online-consultation__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .online-consultation__center {
-    display: none;
+    display: none !important;
   }
 }
 
