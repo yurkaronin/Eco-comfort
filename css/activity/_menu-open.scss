@@ -1,28 +1,31 @@
 .menu-open {
-  overflow: hidden;
+
   .page__header {
     background-color: #fff;
-    color: #7A7A7A;
+    color: #7a7a7a;
   }
 
   .main-navigation {
+    height: initial;
+    overflow: visible;
+    margin: 4px 0;
     a {
-      color: #7A7A7A;
+      color: #7a7a7a;
     }
   }
 
   .header,
   .header__text {
-    color: #7A7A7A;
+    color: #7a7a7a;
   }
 
   .header__logo {
     .first {
-      fill: #7A7A7A;
+      fill: #7a7a7a;
     }
 
     .last {
-      fill: #99BD3D;
+      fill: #99bd3d;
     }
   }
 
@@ -41,8 +44,9 @@
   }
 
   @media (max-width: 768px) {
+    overflow: hidden;
     .header {
-      border-bottom: 2px solid #7A7A7A;
+      border-bottom: 2px solid #7a7a7a;
     }
 
     .main-navigation {

@@ -1,0 +1,20 @@
+.header-sticky {
+  .page__header {
+    background-color: #fff;
+    color: #7a7a7a;
+    box-shadow: 0px 15px 30px rgba(70, 70, 70, 0.15);
+  }
+  .header,
+  .header__text {
+    color: #7a7a7a;
+  }
+  .menu-button .line {
+    stroke: #7a7a7a;
+  }
+  .header__logo .first {
+    fill: #7a7a7a;
+  }
+  .header__logo .last {
+    fill: #99bd3d;
+  }
+}

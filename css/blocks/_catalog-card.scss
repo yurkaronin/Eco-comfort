@@ -1,8 +1,9 @@
 .catalog-card {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 15px 30px rgba(70, 70, 70, 0.15);
   border-radius: 20px;
   overflow: hidden;
+  transition: all 0.3s;
 
   &__header {
     img {
@@ -21,7 +22,7 @@
 
   &__name {
     margin-top: 0;
-    font-weight: 500;
+    font-weight: 600;
   }
   &__text {
     font-size: 14px;
@@ -33,7 +34,18 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 27px;
-    color: #99BD3D;
+    color: #99bd3d;
     margin-bottom: 32px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0px 15px 30px rgba(153, 189, 61, 0.5);
+
+    @media (min-width: 900px) {
+      scale: 1.03;
+    }
+
   }
 }

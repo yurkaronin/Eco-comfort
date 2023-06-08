@@ -24,6 +24,7 @@ if (document.querySelector(".partners__slider")) {
   var swiper = new Swiper(".partners__slider", {
     // slidesPerView: 4,
     // spaceBetween: 32,
+    grabCursor: true,
     pagination: {
       el: ".partners__slider .swiper-pagination",
       clickable: true,
