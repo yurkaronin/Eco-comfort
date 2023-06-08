@@ -1,0 +1,102 @@
+.order-steps {
+  overflow: hidden;
+  &__grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 8fr 4fr;
+    align-items: stretch;
+  }
+  &__photo {
+    height: 100%;
+
+    img {
+      display: block;
+      max-width: 950px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: visible;
+      border-radius: 20px;
+      transform: translateX(215px);
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    counter-reset: my-counter;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: #99bd3d;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      top: -5px;
+      left: 0;
+    }
+
+  }
+  &__item {
+    counter-increment: my-counter;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    color: #616161;
+    border-top: 2px solid #99bd3d;
+    padding-top: 40px;
+
+    &::before {
+      content: counter(my-counter, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 10px;
+      color: #99bd3d;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+      display: block;
+    }
+    &:not(:last-of-type) {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='13' height='16' fill='none'%3e%3cpath stroke='%2399BD3D' stroke-width='2' d='M1.25 14.928 11 8 1.25 1.072'/%3e%3c/svg%3e");
+        width: 13px;
+        height: 16px;
+        top: -9px;
+        right: -2px;
+        background-repeat: no-repeat;
+      }
+    }
+    &:last-of-type {
+      &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          background-color: #99bd3d;
+          border-radius: 50%;
+          width: 12px;
+          height: 12px;
+          top: -7px;
+          right: 0;
+      }
+    }
+
+  }
+
+  .title {
+    text-align: left;
+    max-width: 510px;
+    margin-bottom: 75px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
