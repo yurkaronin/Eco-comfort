@@ -1,1025 +1,1582 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- поисковая оптимизация  -->
+    <title>Экокомфорт</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- подключаем фавикон  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#99bd3d" />
+    <meta name="msapplication-TileColor" content="#99bd3d" />
+    <meta name="theme-color" content="#99bd3d" />
+    <!-- подключаем шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- подключаем стили -->
+    <link rel="stylesheet" href="libs/normalize.min.css" />
+    <link rel="stylesheet" href="libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- поисковая оптимизация  -->
-  <title>Экокомфорт</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- подключаем фавикон  -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#99bd3d" />
-  <meta name="msapplication-TileColor" content="#99bd3d" />
-  <meta name="theme-color" content="#99bd3d" />
-  <!-- подключаем шрифты -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- подключаем стили -->
-  <link rel="stylesheet" href="libs/normalize.min.css" />
-  <link rel="stylesheet" href="libs/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body class="page">
+    <div class="page__header">
+      <header class="header">
+        <!-- Контент шапки -->
+        <div class="wrapper">
+          <div class="header__grid">
+            <div class="header__logo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="251"
+                height="23"
+                fill="none"
+              >
+                <path
+                  fill="#99BD3D"
+                  d="M9.33.64c2.08 0 3.94.47 5.58 1.41a9.94 9.94 0 0 1 3.9 3.87c.94 1.64 1.41 3.5 1.41 5.58s-.47 3.95-1.41 5.61a10.21 10.21 0 0 1-3.9 3.87c-1.64.92-3.5 1.38-5.58 1.38-1.86 0-3.54-.32-5.04-.96a9.725 9.725 0 0 1-3.72-2.79l3.09-2.88c1.48 1.66 3.29 2.49 5.43 2.49 1.54 0 2.84-.45 3.9-1.35 1.08-.9 1.78-2.11 2.1-3.63H6.57V9.52h8.46c-.34-1.44-1.04-2.59-2.1-3.45-1.06-.86-2.34-1.29-3.84-1.29-2.14 0-3.95.83-5.43 2.49L.57 4.39c1-1.22 2.24-2.15 3.72-2.79C5.79.96 7.47.64 9.33.64Zm24.326 12.9h-3.36V22h-4.83V1h4.83v8.49h3.48L39.296 1h5.13l-6.87 10.14L44.636 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84Z"
+                  class="first"
+                />
+                <path
+                  fill="#fff"
+                  d="M83.209 13.54h-3.36V22h-4.83V1h4.83v8.49h3.48L88.849 1h5.13l-6.87 10.14L94.189 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM143.741 22l-.03-12.57-6.18 10.35h-2.16l-6.18-10.11V22h-4.56V1h4.02l7.86 13.05L144.251 1h4.02l.03 21h-4.56Zm36.147-10.56c0 2.78-.95 4.97-2.85 6.57-1.88 1.58-4.59 2.46-8.13 2.64v2.28h-4.47v-2.31c-3.56-.2-6.29-1.09-8.19-2.67-1.88-1.6-2.82-3.77-2.82-6.51 0-2.76.94-4.92 2.82-6.48 1.9-1.58 4.63-2.48 8.19-2.7V.1h4.47v2.13c3.54.2 6.25 1.1 8.13 2.7 1.9 1.6 2.85 3.77 2.85 6.51Zm-10.98 5.4c2.12-.2 3.7-.74 4.74-1.62 1.04-.9 1.56-2.17 1.56-3.81 0-3.2-2.1-4.98-6.3-5.34v10.77Zm-10.77-5.4c0 3.16 2.1 4.96 6.3 5.4V6.07c-2.14.2-3.73.74-4.77 1.62-1.02.86-1.53 2.11-1.53 3.75Zm36.906 10.92c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM220.868 1c1.86 0 3.47.31 4.83.93 1.38.62 2.44 1.5 3.18 2.64.74 1.14 1.11 2.49 1.11 4.05 0 1.54-.37 2.89-1.11 4.05-.74 1.14-1.8 2.02-3.18 2.64-1.36.6-2.97.9-4.83.9h-4.23V22h-4.86V1h9.09Zm-.27 11.25c1.46 0 2.57-.31 3.33-.93.76-.64 1.14-1.54 1.14-2.7 0-1.18-.38-2.08-1.14-2.7-.76-.64-1.87-.96-3.33-.96h-3.96v7.29h3.96Zm29.56-7.29h-6.72V22h-4.8V4.96h-6.69V1h18.21v3.96Z"
+                  class="last"
+                />
+              </svg>
 
-<body class="page">
-  <div class="page__header">
-    <header class="header">
-      <!-- Контент шапки -->
-      <div class="wrapper">
-        <div class="header__grid">
-          <div class="header__logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="251" height="23" fill="none">
-              <path fill="#99BD3D"
-                d="M9.33.64c2.08 0 3.94.47 5.58 1.41a9.94 9.94 0 0 1 3.9 3.87c.94 1.64 1.41 3.5 1.41 5.58s-.47 3.95-1.41 5.61a10.21 10.21 0 0 1-3.9 3.87c-1.64.92-3.5 1.38-5.58 1.38-1.86 0-3.54-.32-5.04-.96a9.725 9.725 0 0 1-3.72-2.79l3.09-2.88c1.48 1.66 3.29 2.49 5.43 2.49 1.54 0 2.84-.45 3.9-1.35 1.08-.9 1.78-2.11 2.1-3.63H6.57V9.52h8.46c-.34-1.44-1.04-2.59-2.1-3.45-1.06-.86-2.34-1.29-3.84-1.29-2.14 0-3.95.83-5.43 2.49L.57 4.39c1-1.22 2.24-2.15 3.72-2.79C5.79.96 7.47.64 9.33.64Zm24.326 12.9h-3.36V22h-4.83V1h4.83v8.49h3.48L39.296 1h5.13l-6.87 10.14L44.636 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84Z"
-                class="first" />
-              <path fill="#fff"
-                d="M83.209 13.54h-3.36V22h-4.83V1h4.83v8.49h3.48L88.849 1h5.13l-6.87 10.14L94.189 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM143.741 22l-.03-12.57-6.18 10.35h-2.16l-6.18-10.11V22h-4.56V1h4.02l7.86 13.05L144.251 1h4.02l.03 21h-4.56Zm36.147-10.56c0 2.78-.95 4.97-2.85 6.57-1.88 1.58-4.59 2.46-8.13 2.64v2.28h-4.47v-2.31c-3.56-.2-6.29-1.09-8.19-2.67-1.88-1.6-2.82-3.77-2.82-6.51 0-2.76.94-4.92 2.82-6.48 1.9-1.58 4.63-2.48 8.19-2.7V.1h4.47v2.13c3.54.2 6.25 1.1 8.13 2.7 1.9 1.6 2.85 3.77 2.85 6.51Zm-10.98 5.4c2.12-.2 3.7-.74 4.74-1.62 1.04-.9 1.56-2.17 1.56-3.81 0-3.2-2.1-4.98-6.3-5.34v10.77Zm-10.77-5.4c0 3.16 2.1 4.96 6.3 5.4V6.07c-2.14.2-3.73.74-4.77 1.62-1.02.86-1.53 2.11-1.53 3.75Zm36.906 10.92c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM220.868 1c1.86 0 3.47.31 4.83.93 1.38.62 2.44 1.5 3.18 2.64.74 1.14 1.11 2.49 1.11 4.05 0 1.54-.37 2.89-1.11 4.05-.74 1.14-1.8 2.02-3.18 2.64-1.36.6-2.97.9-4.83.9h-4.23V22h-4.86V1h9.09Zm-.27 11.25c1.46 0 2.57-.31 3.33-.93.76-.64 1.14-1.54 1.14-2.7 0-1.18-.38-2.08-1.14-2.7-.76-.64-1.87-.96-3.33-.96h-3.96v7.29h3.96Zm29.56-7.29h-6.72V22h-4.8V4.96h-6.69V1h18.21v3.96Z"
-                class="last" />
-            </svg>
+              <p class="header__text">
+                Производство покрытий из резиновой крошки
+              </p>
+            </div>
 
-            <p class="header__text">
-              Производство покрытий из резиновой крошки
-            </p>
+            <ul class="navigation-contacts">
+              <li class="navigation-contacts__item">
+                Звоните, обсудим:<a class="tel" href="tel:84951980228"
+                  >8 (495) 198 02 28</a
+                >
+              </li>
+              <li class="navigation-contacts__item">
+                Вопросы и предложения:<a
+                  class="mail"
+                  href="mailto:ecocomfort@yandex.ru"
+                  >ecocomfort@yandex.ru</a
+                >
+              </li>
+            </ul>
+
+            <div class="header__buttons">
+              <a
+                href="#"
+                class="header__callback button"
+                data-dialog-button="modal-2"
+                ><span class="decorate"></span><span>Заказать звонок</span></a
+              >
+
+              <button class="menu-button" type="button">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                  <path
+                    class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                  />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path
+                    class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
+        </div>
+      </header>
+      <!-- навигация  -->
+      <nav class="main-navigation">
+        <div class="wrapper">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Каталог</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Услуги</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Цены</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">О компании</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Контакты</a>
+            </li>
+          </ul>
 
           <ul class="navigation-contacts">
             <li class="navigation-contacts__item">
-              Звоните, обсудим:<a class="tel" href="tel:84951980228">8 (495) 198 02 28</a>
+              Звоните, обсудим:<a class="phone" href="tel:84951980228"
+                >8 (495) 198 02 28</a
+              >
             </li>
             <li class="navigation-contacts__item">
-              Вопросы и предложения:<a class="mail" href="mailto:ecocomfort@yandex.ru">ecocomfort@yandex.ru</a>
+              Вопросы и предложения:<a
+                class="mail"
+                href="mailto:ecocomfort@yandex.ru"
+                >ecocomfort@yandex.ru</a
+              >
             </li>
           </ul>
+          <a
+            href="#"
+            class="main-navigation__callback button"
+            data-dialog-button="modal-2"
+            ><span class="decorate"></span><span>Заказать звонок</span></a
+          >
+        </div>
+      </nav>
+    </div>
 
-          <div class="header__buttons">
-            <a href="#" class="header__callback button" data-dialog-button="modal-2"><span
-                class="decorate"></span><span>Заказать звонок</span></a>
+    <main class="page__body">
+      <section class="first-screen">
+        <!-- Контент первого экрана -->
+        <div class="first-screen__slider swiper">
+          <div class="swiper-wrapper">
+            <!-- слайд  -->
+            <div class="first-screen__slide swiper-slide">
+              <div class="wrapper">
+                <img
+                  src="img/first-screen/1.jpg"
+                  alt="фото"
+                  loading="lazy"
+                  width="1920"
+                  class="first-screen__image"
+                />
+                <div class="first-screen__details">
+                  <div class="first-screen__header">
+                    <span class="first-screen__price"
+                      >от <del>2 300</del> 1 200₽</span
+                    >
+                    <h3 class="first-screen__name">Резиновая плитка</h3>
+                  </div>
+                  <ul class="first-screen__advantages-list">
+                    <li class="first-screen__advantages-item icon-1">
+                      Нескользящая поверхность, даже если она мокрая - не
+                      скользит
+                    </li>
+                    <li class="first-screen__advantages-item icon-2">
+                      Амортизирует удары и предотвращает травмы
+                    </li>
+                    <li class="first-screen__advantages-item icon-3">
+                      В 10 раз менее подвержена нагреву солнца чем бетон или
+                      асфальт
+                    </li>
+                    <li class="first-screen__advantages-item icon-4">
+                      На 100% состоит из переработанной резины
+                    </li>
+                  </ul>
+                  <a href="#" class="button"
+                    ><span class="decorate"></span
+                    ><span>Перейти в каталог</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- КОНЕЦ слайд  -->
 
-            <button class="menu-button" type="button">
-              <svg width="50" height="50" viewBox="0 0 100 100">
-                <path class="line line1"
-                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                <path class="line line2" d="M 20,50 H 80" />
-                <path class="line line3"
-                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            <!-- слайд  -->
+            <div class="first-screen__slide swiper-slide">
+              <div class="wrapper">
+                <img
+                  src="img/first-screen/1.jpg"
+                  alt="фото"
+                  loading="lazy"
+                  width="1920"
+                  class="first-screen__image"
+                />
+                <div class="first-screen__details">
+                  <div class="first-screen__header">
+                    <span class="first-screen__price"
+                      >от <del>2 300</del> 1 200₽</span
+                    >
+                    <h3 class="first-screen__name">Резиновая плитка</h3>
+                  </div>
+                  <ul class="first-screen__advantages-list">
+                    <li class="first-screen__advantages-item icon-1">
+                      Нескользящая поверхность, даже если она мокрая - не
+                      скользит
+                    </li>
+                    <li class="first-screen__advantages-item icon-2">
+                      Амортизирует удары и предотвращает травмы
+                    </li>
+                    <li class="first-screen__advantages-item icon-3">
+                      В 10 раз менее подвержена нагреву солнца чем бетон или
+                      асфальт
+                    </li>
+                    <li class="first-screen__advantages-item icon-4">
+                      На 100% состоит из переработанной резины
+                    </li>
+                  </ul>
+                  <a href="#" class="button"
+                    ><span class="decorate"></span
+                    ><span>Перейти в каталог</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- КОНЕЦ слайд  -->
+
+            <!-- слайд  -->
+            <div class="first-screen__slide swiper-slide">
+              <div class="wrapper">
+                <img
+                  src="img/first-screen/1.jpg"
+                  alt="фото"
+                  loading="lazy"
+                  width="1920"
+                  class="first-screen__image"
+                />
+                <div class="first-screen__details">
+                  <div class="first-screen__header">
+                    <span class="first-screen__price"
+                      >от <del>2 300</del> 1 200₽</span
+                    >
+                    <h3 class="first-screen__name">Резиновая плитка</h3>
+                  </div>
+                  <ul class="first-screen__advantages-list">
+                    <li class="first-screen__advantages-item icon-1">
+                      Нескользящая поверхность, даже если она мокрая - не
+                      скользит
+                    </li>
+                    <li class="first-screen__advantages-item icon-2">
+                      Амортизирует удары и предотвращает травмы
+                    </li>
+                    <li class="first-screen__advantages-item icon-3">
+                      В 10 раз менее подвержена нагреву солнца чем бетон или
+                      асфальт
+                    </li>
+                    <li class="first-screen__advantages-item icon-4">
+                      На 100% состоит из переработанной резины
+                    </li>
+                  </ul>
+                  <a href="#" class="button"
+                    ><span class="decorate"></span
+                    ><span>Перейти в каталог</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- КОНЕЦ слайд  -->
+
+            <!-- слайд  -->
+            <div class="first-screen__slide swiper-slide">
+              <div class="wrapper">
+                <img
+                  src="img/first-screen/1.jpg"
+                  alt="фото"
+                  loading="lazy"
+                  width="1920"
+                  class="first-screen__image"
+                />
+                <div class="first-screen__details">
+                  <div class="first-screen__header">
+                    <span class="first-screen__price"
+                      >от <del>2 300</del> 1 200₽</span
+                    >
+                    <h3 class="first-screen__name">Резиновая плитка</h3>
+                  </div>
+
+                  <ul class="first-screen__advantages-list">
+                    <li class="first-screen__advantages-item icon-1">
+                      Нескользящая поверхность, даже если она мокрая - не
+                      скользит
+                    </li>
+                    <li class="first-screen__advantages-item icon-2">
+                      Амортизирует удары и предотвращает травмы
+                    </li>
+                    <li class="first-screen__advantages-item icon-3">
+                      В 10 раз менее подвержена нагреву солнца чем бетон или
+                      асфальт
+                    </li>
+                    <li class="first-screen__advantages-item icon-4">
+                      На 100% состоит из переработанной резины
+                    </li>
+                  </ul>
+                  <a href="#" class="button"
+                    ><span class="decorate"></span
+                    ><span>Перейти в каталог</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- КОНЕЦ слайд  -->
+          </div>
+          <div class="first-screen__pagination wrapper">
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="widgets section">
+        <!-- Контент блока с виджетами -->
+        <div class="wrapper">
+          <h2 class="title">Производство резиновых покрытий в Москве</h2>
+          <ul class="widgets__list">
+            <li class="widgets__item">
+              <a class="widgets__link" href="#">
+                <div class="widgets__icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    fill="none"
+                  >
+                    <path
+                      fill="#fff"
+                      fill-rule="evenodd"
+                      d="m16.365 28.086-5.225-5.233a.787.787 0 0 1 0-1.118.787.787 0 0 1 1.116 0l3.952 3.959V1.034a.794.794 0 0 1 .79-.745.79.79 0 0 1 .79.744v24.67l3.96-3.968a.79.79 0 1 1 1.12 1.118l-5.303 5.315a.802.802 0 0 1-.922.15.785.785 0 0 1-.278-.232Zm11.255 5.626H6.386a6.096 6.096 0 0 1-4.31-1.789A6.115 6.115 0 0 1 .29 27.608a.794.794 0 0 1 .79-.745.791.791 0 0 1 .79.745 4.534 4.534 0 0 0 1.326 3.195 4.52 4.52 0 0 0 3.191 1.326H27.62a4.514 4.514 0 0 0 3.19-1.326 4.529 4.529 0 0 0 1.322-3.195.792.792 0 0 1 .79-.792.79.79 0 0 1 .79.792 6.116 6.116 0 0 1-1.786 4.313 6.095 6.095 0 0 1-4.306 1.791Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="widgets__descr">
+                  <h3 class="widgets__title">Скачать прайс</h3>
+                  <p class="widgets__text">
+                    Нажмите на кнопку для начала скачивания каталогам
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="widgets__item">
+              <a class="widgets__link" href="#">
+                <div class="widgets__icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="36"
+                    fill="none"
+                  >
+                    <path
+                      fill="#fff"
+                      d="M28.787 9.805c-.442 0-.736-.294-.736-.735V1.712c0-.441.294-.735.736-.735.441 0 .736.294.736.735V9.07c0 .441-.295.735-.736.735Zm0 25.015c-.442 0-.736-.294-.736-.735v-7.358c0-.441.294-.735.736-.735.441 0 .736.294.736.735v7.358c0 .441-.295.735-.736.735ZM11.129 24.373H1.712c-.442 0-.736-.294-.736-.736 0-.441.294-.736.736-.736h8.681V11.13H1.713c-.442 0-.736-.295-.736-.736s.294-.736.736-.736h9.417c.442 0 .736.295.736.736v13.243c0 .442-.294.736-.736.736Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M5.244 24.373H.829c-.441 0-.735-.294-.735-.735 0-.442.294-.736.735-.736h3.68V11.13H.828c-.441 0-.735-.294-.735-.736 0-.441.294-.735.735-.735h4.415c.441 0 .736.294.736.735v13.244c0 .441-.295.735-.736.735Zm8.976-11.771h-2.207c-.442 0-.736-.295-.736-.736s.294-.736.736-.736h2.207c.441 0 .736.294.736.736 0 .441-.442.736-.736.736ZM8.333 21.43a.736.736 0 1 0 0-1.471.736.736 0 0 0 0 1.471ZM27.462 15.545H24.52c-.441 0-.735-.294-.735-.736 0-.441.294-.736.735-.736h2.943c.442 0 .736-.294.736-.735 0-.442-.294-.736-.736-.736h-6.621c-.442 0-.736-.295-.736-.736s.294-.736.736-.736h6.621c1.178 0 2.207 1.03 2.207 2.208 0 1.177-1.03 2.207-2.207 2.207Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M27.462 18.488H24.52c-.441 0-.735-.295-.735-.736s.294-.736.735-.736h2.943c.442 0 .736-.294.736-.736 0-.441-.294-.735-.736-.735H24.52c-.441 0-.735-.295-.735-.736s.294-.736.735-.736h2.943c1.178 0 2.208 1.03 2.208 2.207 0 1.178-1.03 2.208-2.208 2.208Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M27.462 21.43H24.52c-.441 0-.735-.294-.735-.735 0-.442.294-.736.735-.736h2.943c.442 0 .736-.294.736-.736 0-.441-.294-.735-.736-.735H24.52c-.441 0-.735-.295-.735-.736 0-.442.294-.736.735-.736h2.943c1.178 0 2.208 1.03 2.208 2.207 0 1.178-1.03 2.207-2.208 2.207Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M27.463 24.374H15.69c-.883 0-1.619-.442-1.913-1.177-.147-.148-.294-.295-.589-.295h-2.06c-.441 0-.735-.294-.735-.736v-10.3c0-.441.294-.736.735-.736h2.796c.294 0 .589-.147.589-.441l.588-1.324c.442-.736 1.177-1.178 1.913-1.178h3.237c.295 0 .442.148.589.295.147.147.147.441.147.588a9.243 9.243 0 0 0-.441 2.796c0 .442-.442.736-.736.736-.442 0-.736-.441-.736-.736 0-.736.147-1.471.294-2.207h-2.354c-.294 0-.588.147-.588.441l-.589 1.325c-.441.736-1.177 1.177-1.913 1.177h-2.06v8.829h1.177c.883 0 1.472.441 1.913 1.03.147.294.442.441.589.441h11.771c.442 0 .736-.294.736-.736 0-.441-.294-.735-.735-.735h-2.944c-.44 0-.735-.294-.735-.736 0-.441.294-.736.735-.736h2.944c1.177 0 2.207 1.03 2.207 2.207 0 1.178-.883 2.208-2.06 2.208Z"
+                    />
+                    <path
+                      fill="#fff"
+                      d="M31.73 35.556h-3.973c-2.354 0-4.561-1.177-5.739-3.237-1.618-2.649-2.501-5.592-2.795-8.535 0-.147 0-.441.147-.588.147-.148.294-.295.588-.295h5.886c.442 0 .736.295.736.736 0 1.03.736 1.913 1.766 2.06l3.826.736c1.03.147 1.765 1.177 1.765 2.207v4.709c0 1.177-1.03 2.207-2.207 2.207ZM20.841 24.373c.295 2.501 1.177 5.003 2.502 7.21.883 1.471 2.648 2.502 4.414 2.502h3.973c.442 0 .736-.295.736-.736V28.64c0-.294-.294-.588-.589-.736l-3.825-.735c-1.472-.295-2.502-1.325-2.796-2.796H20.84ZM25.844 12.6h-5.886c-.147 0-.441-.147-.588-.294-.147-.147-.147-.295-.147-.589.294-2.943 1.177-5.886 2.648-8.387A7.188 7.188 0 0 1 27.757.24h3.973c1.177 0 2.207 1.03 2.207 2.207v4.709c0 1.03-.735 1.913-1.765 2.207l-3.826.736c-.883.147-1.619 1.03-1.766 1.912 0 .295-.294.59-.736.59Zm-5.003-1.471h4.415c.441-1.325 1.471-2.355 2.796-2.502l3.825-.736c.295 0 .589-.441.589-.735v-4.71c0-.44-.294-.735-.736-.735h-3.973c-1.766 0-3.531 1.03-4.414 2.502-1.325 2.06-2.207 4.561-2.502 6.916Z"
+                    />
+                  </svg>
+                </div>
+                <div class="widgets__descr">
+                  <h3 class="widgets__title">Консультация онлайн</h3>
+                  <p class="widgets__text">
+                    Мы свяжемся с вами для бесплатной консультации
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="advantages section">
+        <!-- Контент преимуществ -->
+        <div class="wrapper">
+          <div class="advantages__grid">
+            <h2 class="visually-hidden">Наши преимущества</h2>
+            <div class="advantages__photo">
+              <img
+                src="./img/advantages/bg.jpg"
+                alt="фото садового участка"
+                width="640"
+                loading="lazy"
+              />
+            </div>
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <div class="advantages__icon">
+                  <img src="./img/advantages/1.svg" alt="иконка" />
+                </div>
+                <p class="advantages__text">
+                  <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
+                  на складе.
+                </p>
+              </li>
+              <li class="advantages__item">
+                <div class="advantages__icon">
+                  <img src="./img/advantages/2.svg" alt="иконка" />
+                </div>
+                <p class="advantages__text">
+                  <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
+                  на складе.
+                </p>
+              </li>
+              <li class="advantages__item">
+                <div class="advantages__icon">
+                  <img src="./img/advantages/3.svg" alt="иконка" />
+                </div>
+                <p class="advantages__text">
+                  <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
+                  на складе.
+                </p>
+              </li>
+              <li class="advantages__item">
+                <div class="advantages__icon">
+                  <img src="./img/advantages/4.svg" alt="иконка" />
+                </div>
+                <p class="advantages__text">
+                  <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
+                  на складе.
+                </p>
+              </li>
+              <li class="advantages__item">
+                <div class="advantages__icon">
+                  <img src="./img/advantages/5.svg" alt="иконка" />
+                </div>
+                <p class="advantages__text">
+                  <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
+                  на складе.
+                </p>
+              </li>
+              <li class="advantages__item">
+                <div class="advantages__icon">
+                  <img src="./img/advantages/6.svg" alt="иконка" />
+                </div>
+                <p class="advantages__text">
+                  <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
+                  на складе.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog section">
+        <!-- Контент анонсов каталога -->
+        <div class="wrapper">
+          <h2 class="title">Каталог готовой продукции</h2>
+          <ul class="catalog__list">
+            <li class="catalog-card">
+              <header class="catalog-card__header">
+                <img
+                  src="./img/catalog/1.jpg"
+                  alt="фото товара"
+                  width="415"
+                  loading="lazy"
+                />
+              </header>
+
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__name">Резиновая плитка</h3>
+                <p class="catalog-card__text">
+                  Краткое описание резиновой плитки с её выгодными
+                  преимуществами...
+                </p>
+                <span class="catalog-card__price">от 1 200 ₽/м²</span>
+
+                <a
+                  href="#"
+                  class="catalog-card__button button"
+                  data-dialog-button="modal-2"
+                  ><span class="decorate"></span><span>Заказать звонок</span></a
+                >
+              </div>
+            </li>
+
+            <li class="catalog-card">
+              <header class="catalog-card__header">
+                <img
+                  src="./img/catalog/1.jpg"
+                  alt="фото товара"
+                  width="415"
+                  loading="lazy"
+                />
+              </header>
+
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__name">Резиновая плитка</h3>
+                <p class="catalog-card__text">
+                  Краткое описание резиновой плитки с её выгодными
+                  преимуществами...
+                </p>
+                <span class="catalog-card__price">от 1 200 ₽/м²</span>
+
+                <a
+                  href="#"
+                  class="catalog-card__button button"
+                  data-dialog-button="modal-2"
+                  ><span class="decorate"></span><span>Заказать звонок</span></a
+                >
+              </div>
+            </li>
+
+            <li class="catalog-card">
+              <header class="catalog-card__header">
+                <img
+                  src="./img/catalog/1.jpg"
+                  alt="фото товара"
+                  width="415"
+                  loading="lazy"
+                />
+              </header>
+
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__name">Резиновая плитка</h3>
+                <p class="catalog-card__text">
+                  Краткое описание резиновой плитки с её выгодными
+                  преимуществами...
+                </p>
+                <span class="catalog-card__price">от 1 200 ₽/м²</span>
+
+                <a
+                  href="#"
+                  class="catalog-card__button button"
+                  data-dialog-button="modal-2"
+                  ><span class="decorate"></span><span>Заказать звонок</span></a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="partners section">
+        <!-- Контент раздела наши партнёры -->
+        <div class="wrapper">
+          <div class="section__header">
+            <h2 class="title">С нами работают, нам доверяют</h2>
+            <p class="subtitle">
+              Мы зарекомендовали себя как надежные подрядчики у более чем
+              72 Российских компаний,многие из которых вам уже известны
+            </p>
+          </div>
+
+          <!-- Swiper -->
+          <div class="partners__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="partners__link">
+                  <img
+                    class="partners__logo"
+                    src="./img/partners/1.png"
+                    alt="логотип партнёра"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="partners__link">
+                  <img
+                    class="partners__logo"
+                    src="./img/partners/2.png"
+                    alt="логотип партнёра"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="partners__link">
+                  <img
+                    class="partners__logo"
+                    src="./img/partners/3.png"
+                    alt="логотип партнёра"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="partners__link">
+                  <img
+                    class="partners__logo"
+                    src="./img/partners/4.png"
+                    alt="логотип партнёра"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="partners__link">
+                  <img
+                    class="partners__logo"
+                    src="./img/partners/1.png"
+                    alt="логотип партнёра"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="partners__link">
+                  <img
+                    class="partners__logo"
+                    src="./img/partners/2.png"
+                    alt="логотип партнёра"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="partners__link">
+                  <img
+                    class="partners__logo"
+                    src="./img/partners/3.png"
+                    alt="логотип партнёра"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog section">
+        <!-- Контент анонсов каталога -->
+        <div class="wrapper">
+          <h2 class="title">Резиновая крошка и сопутствующие товары</h2>
+          <ul class="catalog__list">
+            <li class="catalog-card">
+              <header class="catalog-card__header">
+                <img
+                  src="./img/catalog/3.jpg"
+                  alt="фото товара"
+                  width="415"
+                  loading="lazy"
+                />
+              </header>
+
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__name">Сопутствующие товары</h3>
+                <p class="catalog-card__text">
+                  Краткое описание резиновой плитки с её выгодными
+                  преимуществами...
+                </p>
+                <span class="catalog-card__price">от 1 200 ₽</span>
+
+                <a
+                  href="#"
+                  class="catalog-card__button button"
+                  data-dialog-button="modal-2"
+                  ><span class="decorate"></span><span>Подробнее</span></a
+                >
+              </div>
+            </li>
+
+            <li class="catalog-card">
+              <header class="catalog-card__header">
+                <img
+                  src="./img/catalog/2.jpg"
+                  alt="фото товара"
+                  width="415"
+                  loading="lazy"
+                />
+              </header>
+
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__name">Сопутствующие товары</h3>
+                <p class="catalog-card__text">
+                  Краткое описание резиновой плитки с её выгодными
+                  преимуществами...
+                </p>
+                <span class="catalog-card__price">от 1 200 ₽</span>
+
+                <a
+                  href="#"
+                  class="catalog-card__button button"
+                  data-dialog-button="modal-2"
+                  ><span class="decorate"></span><span>Подробнее</span></a
+                >
+              </div>
+            </li>
+
+            <li class="catalog-card">
+              <header class="catalog-card__header">
+                <img
+                  src="./img/catalog/3.jpg"
+                  alt="фото товара"
+                  width="415"
+                  loading="lazy"
+                />
+              </header>
+
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__name">Сопутствующие товары</h3>
+                <p class="catalog-card__text">
+                  Краткое описание резиновой плитки с её выгодными
+                  преимуществами...
+                </p>
+                <span class="catalog-card__price">от 1 200 ₽</span>
+
+                <a
+                  href="#"
+                  class="catalog-card__button button"
+                  data-dialog-button="modal-2"
+                  ><span class="decorate"></span><span>Подробнее</span></a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="order-steps section">
+        <!-- Контент шагов оформления заказа -->
+        <div class="wrapper">
+          <div class="order-steps__grid">
+            <div class="order-steps__details">
+              <h2 class="title">Порядок оформления заказа + доставка</h2>
+              <ol class="order-steps__list">
+                <li class="order-steps__item">
+                  Позвоните нам, Напишите на почту или оставьте заявку на сайте.
+                </li>
+                <li class="order-steps__item">
+                  Наш менеджер обсуждает с вами детали заявки и формирует
+                  коммерческое предложение.
+                </li>
+                <li class="order-steps__item">
+                  Вы получаете КП и принимаете решение о покупке.
+                </li>
+                <li class="order-steps__item">
+                  Оплачиваете заказ удобным для вас способом.
+                </li>
+                <li class="order-steps__item">
+                  Происходит производство/отгрузка товара со склада.
+                </li>
+                <li class="order-steps__item">
+                  Доставка товара и подписание закрывающих документов при
+                  получении.
+                </li>
+              </ol>
+            </div>
+            <div class="order-steps__photo">
+              <img
+                src="./img/order-steps/1.jpg"
+                alt="фото благоустроенной территории"
+                width="950"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="online-consultation section">
+        <!-- Контент онлайн консультации -->
+        <div class="wrapper">
+          <div class="online-consultation__grid">
+            <div class="online-consultation__left">
+              <h2 class="title">Затрудняетесь с выбором?</h2>
+              <p class="text">
+                Мы бесплатно проконсультируем вас по телефону или в чате.
+                Позвоните или оставьте заявку через форму на сайте.
+              </p>
+            </div>
+            <div class="online-consultation__center">
+              <img
+                src="./img/online-consultation/1.png"
+                alt="фото плитки"
+                loading="lazy"
+                width="424"
+              />
+            </div>
+            <div class="online-consultation__right">
+              <a class="phone" href="tel:84951980228">8 (495) 198 02 28</a>
+              <a href="#" class="button" data-dialog-button="modal-2"
+                ><span class="decorate"></span><span>Задать вопрос</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="licenses-slider section">
+        <!-- Контент слайдера с лицензиями и сертификатами -->
+        <!-- Swiper -->
+        <div class="wrapper">
+          <h2 class="title">Лицензии и сертификаты</h2>
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a
+                  class="licenses-slider__link"
+                  data-fslightbox="licenses-gallery"
+                  href="./img/licenses/1.jpg"
+                >
+                  <img
+                    class="licenses-slider__photo"
+                    src="./img/licenses/1.jpg"
+                    alt="сертификат"
+                    loading="lazy"
+                    width="300"
+                  />
+                </a>
+                <p class="licenses-slider__text">
+                  Название документа или его описание
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="licenses-slider__link"
+                  data-fslightbox="licenses-gallery"
+                  href="./img/licenses/1.jpg"
+                >
+                  <img
+                    class="licenses-slider__photo"
+                    src="./img/licenses/1.jpg"
+                    alt="сертификат"
+                    loading="lazy"
+                    width="300"
+                  />
+                </a>
+                <p class="licenses-slider__text">
+                  Название документа или его описание
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="licenses-slider__link"
+                  data-fslightbox="licenses-gallery"
+                  href="./img/licenses/1.jpg"
+                >
+                  <img
+                    class="licenses-slider__photo"
+                    src="./img/licenses/1.jpg"
+                    alt="сертификат"
+                    loading="lazy"
+                    width="300"
+                  />
+                </a>
+                <p class="licenses-slider__text">
+                  Название документа или его описание
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="licenses-slider__link"
+                  data-fslightbox="licenses-gallery"
+                  href="./img/licenses/1.jpg"
+                >
+                  <img
+                    class="licenses-slider__photo"
+                    src="./img/licenses/1.jpg"
+                    alt="сертификат"
+                    loading="lazy"
+                    width="300"
+                  />
+                </a>
+                <p class="licenses-slider__text">
+                  Название документа или его описание
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="licenses-slider__link"
+                  data-fslightbox="licenses-gallery"
+                  href="./img/licenses/1.jpg"
+                >
+                  <img
+                    class="licenses-slider__photo"
+                    src="./img/licenses/1.jpg"
+                    alt="сертификат"
+                    loading="lazy"
+                    width="300"
+                  />
+                </a>
+                <p class="licenses-slider__text">
+                  Название документа или его описание
+                </p>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio section">
+        <!-- Контент портфолио работ в виде фотогалереи -->
+        <div class="wrapper">
+          <h2 class="title">
+            Реализованные объекты на&nbsp;которых использовалась наша продукция
+          </h2>
+          <ul class="portfolio__list gallery-grid">
+            <li class="gallery-grid__item gallery-grid__item-1">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-2">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-3">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-4">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-5">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-6">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-7">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-8">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-9">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="gallery-grid__item gallery-grid__item-10">
+              <a
+                href="./img/portfolio/1.jpg"
+                data-fslightbox="portfolio-gallery-1"
+                class="portfolio__link"
+              >
+                <img
+                  src="./img/portfolio/1.jpg"
+                  alt="фото портфолио"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="delivery section">
+        <!-- Контент доставки заказа -->
+        <div class="wrapper">
+          <h2 class="title">Доставка в любой город России</h2>
+
+          <!-- Swiper -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="delivery__link">
+                  <img
+                    class="delivery__logo"
+                    src="./img/delivery/1.png"
+                    alt="логотип"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="delivery__link">
+                  <img
+                    class="delivery__logo"
+                    src="./img/delivery/2.png"
+                    alt="логотип"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="delivery__link">
+                  <img
+                    class="delivery__logo"
+                    src="./img/delivery/3.png"
+                    alt="логотип"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="delivery__link">
+                  <img
+                    class="delivery__logo"
+                    src="./img/delivery/4.png"
+                    alt="логотип"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="delivery__link">
+                  <img
+                    class="delivery__logo"
+                    src="./img/delivery/5.png"
+                    alt="логотип"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="delivery__link">
+                  <img
+                    class="delivery__logo"
+                    src="./img/delivery/1.png"
+                    alt="логотип"
+                  />
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="delivery__link">
+                  <img
+                    class="delivery__logo"
+                    src="./img/delivery/2.png"
+                    alt="логотип"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="delivery__footer">
+            <p class="delivery__details">
+              Доставка по Москве и области от 1 000 рублей.
+            </p>
+            <a
+              href="#"
+              class="catalog-card__button button"
+              data-dialog-button="modal-2"
+              ><span class="decorate"></span
+              ><span>Подробнее о доставке</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="production-gallery section">
+        <!-- Контент фотогалереи нашего производства -->
+        <div class="wrapper">
+          <h2 class="title">Фото с нашего производства</h2>
+          <ul class="production-gallery__list">
+            <li class="production-gallery__item">
+              <a
+                href="./img/production/1.jpg"
+                data-fslightbox="production-gallery-1"
+                class="production-gallery__link"
+              >
+                <img
+                  src="./img/production/1.jpg"
+                  alt="фото с производства"
+                  loading="lazy"
+                />
+                <div class="production-gallery__cover">
+                  <h3>Название процесса производства</h3>
+                  <p>
+                    Дополнительные инструменты и материалы, которые необходимы
+                    для производства, ремонта и укладки покрытий из резиновой
+                    крошки.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="production-gallery__item">
+              <a
+                href="./img/production/1.jpg"
+                data-fslightbox="production-gallery-1"
+                class="production-gallery__link"
+              >
+                <img
+                  src="./img/production/1.jpg"
+                  alt="фото с производства"
+                  loading="lazy"
+                />
+                <div class="production-gallery__cover">
+                  <h3>Название процесса производства</h3>
+                  <p>
+                    Дополнительные инструменты и материалы, которые необходимы
+                    для производства, ремонта и укладки покрытий из резиновой
+                    крошки.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="production-gallery__item">
+              <a
+                href="./img/production/1.jpg"
+                data-fslightbox="production-gallery-1"
+                class="production-gallery__link"
+              >
+                <img
+                  src="./img/production/1.jpg"
+                  alt="фото с производства"
+                  loading="lazy"
+                />
+                <div class="production-gallery__cover">
+                  <h3>Название процесса производства</h3>
+                  <p>
+                    Дополнительные инструменты и материалы, которые необходимы
+                    для производства, ремонта и укладки покрытий из резиновой
+                    крошки.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="production-gallery__item">
+              <a
+                href="./img/production/1.jpg"
+                data-fslightbox="production-gallery-1"
+                class="production-gallery__link"
+              >
+                <img
+                  src="./img/production/1.jpg"
+                  alt="фото с производства"
+                  loading="lazy"
+                />
+                <div class="production-gallery__cover">
+                  <h3>Название процесса производства</h3>
+                  <p>
+                    Дополнительные инструменты и материалы, которые необходимы
+                    для производства, ремонта и укладки покрытий из резиновой
+                    крошки.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="production-gallery__item">
+              <a
+                href="./img/production/1.jpg"
+                data-fslightbox="production-gallery-1"
+                class="production-gallery__link"
+              >
+                <img
+                  src="./img/production/1.jpg"
+                  alt="фото с производства"
+                  loading="lazy"
+                />
+                <div class="production-gallery__cover">
+                  <h3>Название процесса производства</h3>
+                  <p>
+                    Дополнительные инструменты и материалы, которые необходимы
+                    для производства, ремонта и укладки покрытий из резиновой
+                    крошки.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="production-gallery__item">
+              <a
+                href="./img/production/1.jpg"
+                data-fslightbox="production-gallery-1"
+                class="production-gallery__link"
+              >
+                <img
+                  src="./img/production/1.jpg"
+                  alt="фото с производства"
+                  loading="lazy"
+                />
+                <div class="production-gallery__cover">
+                  <h3>Название процесса производства</h3>
+                  <p>
+                    Дополнительные инструменты и материалы, которые необходимы
+                    для производства, ремонта и укладки покрытий из резиновой
+                    крошки.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="online-consultation online-consultation--mod section">
+        <!-- Контент онлайн консультации -->
+        <div class="wrapper">
+          <div class="online-consultation__grid">
+            <div class="online-consultation__left">
+              <h2 class="title">Затрудняетесь с выбором?</h2>
+              <p class="text">
+                Мы бесплатно проконсультируем вас по телефону или в чате.
+                Позвоните или оставьте заявку через форму на сайте.
+              </p>
+            </div>
+            <div class="online-consultation__center">
+              <img
+                src="./img/online-consultation/2.png"
+                alt="фото плитки"
+                loading="lazy"
+                width="278"
+              />
+            </div>
+            <div class="online-consultation__right">
+              <a class="phone" href="tel:84951980228">8 (495) 198 02 28</a>
+              <a href="#" class="button" data-dialog-button="modal-2"
+                ><span class="decorate"></span><span>Задать вопрос</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page__footer footer">
+      <!-- Контент подвала сайта -->
+      <div class="footer__top">
+        <div class="wrapper">
+          <p class="footer__text">
+            Вся информация на сайте носит справочный характер и не является
+            публичной офертой, определяемой статьей 437 гк рф.
+          </p>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="wrapper">
+          <div class="footer__grid">
+            <div class="footer__logo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="251"
+                height="23"
+                fill="none"
+              >
+                <path
+                  fill="#99BD3D"
+                  d="M9.33.64c2.08 0 3.94.47 5.58 1.41a9.94 9.94 0 0 1 3.9 3.87c.94 1.64 1.41 3.5 1.41 5.58s-.47 3.95-1.41 5.61a10.21 10.21 0 0 1-3.9 3.87c-1.64.92-3.5 1.38-5.58 1.38-1.86 0-3.54-.32-5.04-.96a9.725 9.725 0 0 1-3.72-2.79l3.09-2.88c1.48 1.66 3.29 2.49 5.43 2.49 1.54 0 2.84-.45 3.9-1.35 1.08-.9 1.78-2.11 2.1-3.63H6.57V9.52h8.46c-.34-1.44-1.04-2.59-2.1-3.45-1.06-.86-2.34-1.29-3.84-1.29-2.14 0-3.95.83-5.43 2.49L.57 4.39c1-1.22 2.24-2.15 3.72-2.79C5.79.96 7.47.64 9.33.64Zm24.326 12.9h-3.36V22h-4.83V1h4.83v8.49h3.48L39.296 1h5.13l-6.87 10.14L44.636 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84Z"
+                  class="first"
+                />
+                <path
+                  fill="#fff"
+                  d="M83.209 13.54h-3.36V22h-4.83V1h4.83v8.49h3.48L88.849 1h5.13l-6.87 10.14L94.189 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM143.741 22l-.03-12.57-6.18 10.35h-2.16l-6.18-10.11V22h-4.56V1h4.02l7.86 13.05L144.251 1h4.02l.03 21h-4.56Zm36.147-10.56c0 2.78-.95 4.97-2.85 6.57-1.88 1.58-4.59 2.46-8.13 2.64v2.28h-4.47v-2.31c-3.56-.2-6.29-1.09-8.19-2.67-1.88-1.6-2.82-3.77-2.82-6.51 0-2.76.94-4.92 2.82-6.48 1.9-1.58 4.63-2.48 8.19-2.7V.1h4.47v2.13c3.54.2 6.25 1.1 8.13 2.7 1.9 1.6 2.85 3.77 2.85 6.51Zm-10.98 5.4c2.12-.2 3.7-.74 4.74-1.62 1.04-.9 1.56-2.17 1.56-3.81 0-3.2-2.1-4.98-6.3-5.34v10.77Zm-10.77-5.4c0 3.16 2.1 4.96 6.3 5.4V6.07c-2.14.2-3.73.74-4.77 1.62-1.02.86-1.53 2.11-1.53 3.75Zm36.906 10.92c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM220.868 1c1.86 0 3.47.31 4.83.93 1.38.62 2.44 1.5 3.18 2.64.74 1.14 1.11 2.49 1.11 4.05 0 1.54-.37 2.89-1.11 4.05-.74 1.14-1.8 2.02-3.18 2.64-1.36.6-2.97.9-4.83.9h-4.23V22h-4.86V1h9.09Zm-.27 11.25c1.46 0 2.57-.31 3.33-.93.76-.64 1.14-1.54 1.14-2.7 0-1.18-.38-2.08-1.14-2.7-.76-.64-1.87-.96-3.33-.96h-3.96v7.29h3.96Zm29.56-7.29h-6.72V22h-4.8V4.96h-6.69V1h18.21v3.96Z"
+                  class="last"
+                />
               </svg>
+
+              <p class="footer__text">
+                Производство покрытий из резиновой крошки
+              </p>
+            </div>
+
+            <ul class="footer__navigation">
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link">Блог</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link"
+                  >Акции и спец-предложения</a
+                >
+              </li>
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link"
+                  >Выполненные проекты</a
+                >
+              </li>
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link">Доставка</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link">Отзывы</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link"
+                  >Версия для слабовидящих</a
+                >
+              </li>
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link"
+                  >Официальные данные</a
+                >
+              </li>
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link">Написать нам</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a href="#" class="footer__navigation-link">О компании</a>
+              </li>
+            </ul>
+
+            <ul class="footer__contacts">
+              <li class="footer__contacts-item">
+                Менеджер: <a href="tel:84951980228">+7 (495) 198 02 28</a>
+              </li>
+              <li class="footer__contacts-item">
+                Бухгалтерия: <a href="tel:89933459287">+7 993 345 92 87</a>
+              </li>
+
+              <li class="footer__contacts-item">
+                E-mail:
+                <a href="mailto:ecocomfort@yandex.ru">ecocomfort@yandex.ru</a>
+              </li>
+              <li class="footer__contacts-item">
+                <address>
+                  Адрес производства и отгрузки:<br />
+                  г. Москва, ул. Ибрагимова, д. 31
+                </address>
+              </li>
+              <li class="footer__contacts-item">
+                Режим работы офиса:<br />
+                с 9:00 до 18:00 (СБ-ВС – выходной)
+              </li>
+              <li class="footer__contacts-item">
+                Режим работы склада:<br />
+                с 10:00 до 16:00 (СБ-ВС – выходной)
+              </li>
+            </ul>
+
+            <div class="footer__links">
+              <ul class="footer__links-list">
+                <li class="footer__links-item">
+                  <a class="footer__link" href="#">Карта сайта</a>
+                </li>
+                <li class="footer__links-item">
+                  <a class="footer__link" href="#"
+                    >Обработка персональных данных</a
+                  >
+                </li>
+                <li class="footer__links-item">
+                  <a class="footer__link" href="#"
+                    >Пользовательское соглашение</a
+                  >
+                </li>
+              </ul>
+              <ul class="footer__social">
+                <li><a href="#" target="_blank"></a><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none"><path fill="#fff" d="M25 0C11.195 0 0 11.195 0 25s11.195 25 25 25 25-11.195 25-25S38.805 0 25 0Zm.53 39.556h-.006a14.957 14.957 0 0 1-7.15-1.821l-7.933 2.08 2.123-7.751a14.925 14.925 0 0 1-1.997-7.478c.003-8.248 6.715-14.957 14.963-14.957 4.002.001 7.76 1.56 10.584 4.386a14.865 14.865 0 0 1 4.379 10.582c-.004 8.248-6.717 14.959-14.963 14.959Z"/><path fill="#fff" d="M25.535 12.155c-6.86 0-12.44 5.577-12.442 12.432-.001 2.349.657 4.637 1.901 6.616l.296.47-1.257 4.588 4.707-1.234.455.27a12.417 12.417 0 0 0 6.33 1.732h.004c6.855 0 12.434-5.577 12.437-12.432a12.355 12.355 0 0 0-3.64-8.796 12.354 12.354 0 0 0-8.791-3.646Zm7.315 17.777c-.312.873-1.805 1.67-2.524 1.777-.644.096-1.459.137-2.355-.148a21.58 21.58 0 0 1-2.131-.787c-3.75-1.619-6.2-5.394-6.387-5.643-.187-.25-1.526-2.027-1.526-3.867 0-1.84.966-2.744 1.308-3.118.343-.374.748-.468.997-.468.25 0 .499.003.717.014.23.01.538-.088.84.641.313.748 1.06 2.588 1.154 2.775.093.187.155.405.03.655-.124.25-.538.788-.934 1.278-.166.206-.382.389-.164.763s.969 1.598 2.08 2.59c1.428 1.273 2.633 1.667 3.007 1.854.373.187.591.156.81-.093.218-.25.934-1.092 1.183-1.466.25-.374.499-.311.842-.187.342.125 2.18 1.03 2.554 1.216.374.187.623.28.717.437.093.156.093.904-.218 1.777Z"/></svg></li>
+                <li><a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none"><path fill="#fff" d="M25 50c13.81 0 25-11.19 25-25S38.81 0 25 0 0 11.19 0 25s11.19 25 25 25ZM11.44 24.458l24.104-9.293c1.119-.405 2.096.273 1.733 1.964l.002-.002-4.104 19.335c-.304 1.371-1.119 1.705-2.258 1.059l-6.25-4.606-3.015 2.904c-.333.333-.614.614-1.26.614l.443-6.36L32.42 19.608c.504-.443-.113-.693-.777-.252L17.327 28.37l-6.17-1.925c-1.34-.425-1.37-1.34.283-1.986Z"/></svg></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p class="footer__text">
+              © Название компании 2007 — 2023 ООО "Название компании", г.
+              Москва, ул. Попочкина, д. 68. Лицензия № ЛО 67-01-001392 от
+              21.12.2018. Любое копирование материалов сайта без указания
+              источника запрещена, согласно 4ч, раздел 7 Гражданского Кодекса
+              РФ.
+            </p>
+            <p class="footer__developer">
+              Разработчик сайта:
+              <a href="https://t.me/Yuriy_Ronin" target="_blank" title="Можно связаться с разработчиком этого сайта в Telegram"
+                >Юрий Савченко</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="overlay"
+      title="Кликните если хотите закрыть диалоговое окно"
+    ></div>
+
+    <!-- Диалоговые окна -->
+    <!-- Задать вопрос -->
+    <section class="modal" data-dialog-modal="modal-2">
+      <form action="javascript:void(0);" method="post">
+        <div class="modal__wrapper">
+          <!-- шапка диалогового окна -->
+          <div class="modal__header">
+            <h2 class="title">Заказать звонок</h2>
+            <p class="subtitle">
+              Заполните простую форму. Наши специалисты свяжутся с вами в
+              ближайшее время.
+            </p>
+          </div>
+          <!-- КОНЕЦ шапка диалогового окна -->
+
+          <!-- тело диалогового окна  -->
+          <div class="modal__body">
+            <div class="modal__grid">
+              <div class="modal__form-item">
+                <label for="question-form-tel">ФИО:</label>
+                <input
+                  id="question-form-tel"
+                  type="text"
+                  placeholder="Введите имя"
+                />
+              </div>
+
+              <div class="modal__form-item">
+                <label for="question-form-name">Телефон:</label>
+                <input
+                  id="question-form-name"
+                  type="tel"
+                  placeholder="Введите телефон"
+                  required
+                />
+              </div>
+
+              <div class="modal__form-item">
+                <label for="question-form-email">E-mail:</label>
+                <input
+                  id="question-form-email"
+                  type="text"
+                  placeholder="Для ответа"
+                />
+              </div>
+
+              <div class="modal__form-item modal__form-item--textarea">
+                <label for="question-form-texarea">Сообщение:</label>
+                <textarea
+                  id="question-form-texarea"
+                  cols="30"
+                  rows="10"
+                  placeholder="Введите Ваш вопрос или сообщение"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- КОНЕЦ тело диалогового окна  -->
+
+          <!-- Подвал диалогового окна -->
+          <div class="modal__footer">
+            <div class="modal__form-item--check">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="user-consent"
+                id="promo-form-consent"
+                checked
+              />
+              <label for="promo-form-consent"
+                >Я согласен с условиями обработки
+                <a href="#" target="_blank">персональных данных</a></label
+              >
+            </div>
+
+            <button class="button" type="submit">
+              <span>Отправить</span>
+              <span class="decorate"></span>
             </button>
           </div>
-        </div>
-      </div>
-    </header>
-    <!-- навигация  -->
-    <nav class="main-navigation">
-      <div class="wrapper">
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Главная</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Каталог</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Услуги</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Цены</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">О компании</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Контакты</a>
-          </li>
-        </ul>
-
-        <ul class="navigation-contacts">
-          <li class="navigation-contacts__item">
-            Звоните, обсудим:<a class="phone" href="tel:84951980228">8 (495) 198 02 28</a>
-          </li>
-          <li class="navigation-contacts__item">
-            Вопросы и предложения:<a class="mail" href="mailto:ecocomfort@yandex.ru">ecocomfort@yandex.ru</a>
-          </li>
-        </ul>
-        <a href="#" class="main-navigation__callback button" data-dialog-button="modal-2"><span
-            class="decorate"></span><span>Заказать звонок</span></a>
-      </div>
-    </nav>
-  </div>
-
-  <main class="page__body">
-
-    <section class="first-screen">
-      <!-- Контент первого экрана -->
-      <div class="first-screen__slider swiper">
-        <div class="swiper-wrapper">
-          <!-- слайд  -->
-          <div class="first-screen__slide swiper-slide">
-            <div class="wrapper">
-              <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image" />
-              <div class="first-screen__details">
-                <div class="first-screen__header">
-                  <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
-                  <h3 class="first-screen__name">Резиновая плитка</h3>
-                </div>
-                <ul class="first-screen__advantages-list">
-                  <li class="first-screen__advantages-item icon-1">
-                    Нескользящая поверхность, даже если она мокрая - не
-                    скользит
-                  </li>
-                  <li class="first-screen__advantages-item icon-2">
-                    Амортизирует удары и предотвращает травмы
-                  </li>
-                  <li class="first-screen__advantages-item icon-3">
-                    В 10 раз менее подвержена нагреву солнца чем бетон или
-                    асфальт
-                  </li>
-                  <li class="first-screen__advantages-item icon-4">
-                    На 100% состоит из переработанной резины
-                  </li>
-                </ul>
-                <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
-              </div>
-            </div>
-          </div>
-          <!-- КОНЕЦ слайд  -->
-
-          <!-- слайд  -->
-          <div class="first-screen__slide swiper-slide">
-            <div class="wrapper">
-              <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image" />
-              <div class="first-screen__details">
-                <div class="first-screen__header">
-                  <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
-                  <h3 class="first-screen__name">Резиновая плитка</h3>
-                </div>
-                <ul class="first-screen__advantages-list">
-                  <li class="first-screen__advantages-item icon-1">
-                    Нескользящая поверхность, даже если она мокрая - не
-                    скользит
-                  </li>
-                  <li class="first-screen__advantages-item icon-2">
-                    Амортизирует удары и предотвращает травмы
-                  </li>
-                  <li class="first-screen__advantages-item icon-3">
-                    В 10 раз менее подвержена нагреву солнца чем бетон или
-                    асфальт
-                  </li>
-                  <li class="first-screen__advantages-item icon-4">
-                    На 100% состоит из переработанной резины
-                  </li>
-                </ul>
-                <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
-              </div>
-            </div>
-          </div>
-          <!-- КОНЕЦ слайд  -->
-
-          <!-- слайд  -->
-          <div class="first-screen__slide swiper-slide">
-            <div class="wrapper">
-              <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image" />
-              <div class="first-screen__details">
-                <div class="first-screen__header">
-                  <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
-                  <h3 class="first-screen__name">Резиновая плитка</h3>
-                </div>
-                <ul class="first-screen__advantages-list">
-                  <li class="first-screen__advantages-item icon-1">
-                    Нескользящая поверхность, даже если она мокрая - не
-                    скользит
-                  </li>
-                  <li class="first-screen__advantages-item icon-2">
-                    Амортизирует удары и предотвращает травмы
-                  </li>
-                  <li class="first-screen__advantages-item icon-3">
-                    В 10 раз менее подвержена нагреву солнца чем бетон или
-                    асфальт
-                  </li>
-                  <li class="first-screen__advantages-item icon-4">
-                    На 100% состоит из переработанной резины
-                  </li>
-                </ul>
-                <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
-              </div>
-            </div>
-          </div>
-          <!-- КОНЕЦ слайд  -->
-
-          <!-- слайд  -->
-          <div class="first-screen__slide swiper-slide">
-            <div class="wrapper">
-              <img src="img/first-screen/1.jpg" alt="фото" loading="lazy" width="1920" class="first-screen__image" />
-              <div class="first-screen__details">
-                <div class="first-screen__header">
-                  <span class="first-screen__price">от <del>2 300</del> 1 200₽</span>
-                  <h3 class="first-screen__name">Резиновая плитка</h3>
-                </div>
-
-                <ul class="first-screen__advantages-list">
-                  <li class="first-screen__advantages-item icon-1">
-                    Нескользящая поверхность, даже если она мокрая - не
-                    скользит
-                  </li>
-                  <li class="first-screen__advantages-item icon-2">
-                    Амортизирует удары и предотвращает травмы
-                  </li>
-                  <li class="first-screen__advantages-item icon-3">
-                    В 10 раз менее подвержена нагреву солнца чем бетон или
-                    асфальт
-                  </li>
-                  <li class="first-screen__advantages-item icon-4">
-                    На 100% состоит из переработанной резины
-                  </li>
-                </ul>
-                <a href="#" class="button"><span class="decorate"></span><span>Перейти в каталог</span></a>
-              </div>
-            </div>
-          </div>
-          <!-- КОНЕЦ слайд  -->
-        </div>
-        <div class="first-screen__pagination wrapper">
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="widgets section">
-      <!-- Контент блока с виджетами -->
-      <div class="wrapper">
-        <h2 class="title">Производство резиновых покрытий в Москве</h2>
-        <ul class="widgets__list">
-          <li class="widgets__item">
-            <a class="widgets__link" href="#">
-              <div class="widgets__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="m16.365 28.086-5.225-5.233a.787.787 0 0 1 0-1.118.787.787 0 0 1 1.116 0l3.952 3.959V1.034a.794.794 0 0 1 .79-.745.79.79 0 0 1 .79.744v24.67l3.96-3.968a.79.79 0 1 1 1.12 1.118l-5.303 5.315a.802.802 0 0 1-.922.15.785.785 0 0 1-.278-.232Zm11.255 5.626H6.386a6.096 6.096 0 0 1-4.31-1.789A6.115 6.115 0 0 1 .29 27.608a.794.794 0 0 1 .79-.745.791.791 0 0 1 .79.745 4.534 4.534 0 0 0 1.326 3.195 4.52 4.52 0 0 0 3.191 1.326H27.62a4.514 4.514 0 0 0 3.19-1.326 4.529 4.529 0 0 0 1.322-3.195.792.792 0 0 1 .79-.792.79.79 0 0 1 .79.792 6.116 6.116 0 0 1-1.786 4.313 6.095 6.095 0 0 1-4.306 1.791Z"
-                    clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="widgets__descr">
-                <h3 class="widgets__title">Скачать прайс</h3>
-                <p class="widgets__text">
-                  Нажмите на кнопку для начала скачивания каталогам
-                </p>
-              </div>
-            </a>
-          </li>
-          <li class="widgets__item">
-            <a class="widgets__link" href="#">
-              <div class="widgets__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="36" fill="none">
-                  <path fill="#fff"
-                    d="M28.787 9.805c-.442 0-.736-.294-.736-.735V1.712c0-.441.294-.735.736-.735.441 0 .736.294.736.735V9.07c0 .441-.295.735-.736.735Zm0 25.015c-.442 0-.736-.294-.736-.735v-7.358c0-.441.294-.735.736-.735.441 0 .736.294.736.735v7.358c0 .441-.295.735-.736.735ZM11.129 24.373H1.712c-.442 0-.736-.294-.736-.736 0-.441.294-.736.736-.736h8.681V11.13H1.713c-.442 0-.736-.295-.736-.736s.294-.736.736-.736h9.417c.442 0 .736.295.736.736v13.243c0 .442-.294.736-.736.736Z" />
-                  <path fill="#fff"
-                    d="M5.244 24.373H.829c-.441 0-.735-.294-.735-.735 0-.442.294-.736.735-.736h3.68V11.13H.828c-.441 0-.735-.294-.735-.736 0-.441.294-.735.735-.735h4.415c.441 0 .736.294.736.735v13.244c0 .441-.295.735-.736.735Zm8.976-11.771h-2.207c-.442 0-.736-.295-.736-.736s.294-.736.736-.736h2.207c.441 0 .736.294.736.736 0 .441-.442.736-.736.736ZM8.333 21.43a.736.736 0 1 0 0-1.471.736.736 0 0 0 0 1.471ZM27.462 15.545H24.52c-.441 0-.735-.294-.735-.736 0-.441.294-.736.735-.736h2.943c.442 0 .736-.294.736-.735 0-.442-.294-.736-.736-.736h-6.621c-.442 0-.736-.295-.736-.736s.294-.736.736-.736h6.621c1.178 0 2.207 1.03 2.207 2.208 0 1.177-1.03 2.207-2.207 2.207Z" />
-                  <path fill="#fff"
-                    d="M27.462 18.488H24.52c-.441 0-.735-.295-.735-.736s.294-.736.735-.736h2.943c.442 0 .736-.294.736-.736 0-.441-.294-.735-.736-.735H24.52c-.441 0-.735-.295-.735-.736s.294-.736.735-.736h2.943c1.178 0 2.208 1.03 2.208 2.207 0 1.178-1.03 2.208-2.208 2.208Z" />
-                  <path fill="#fff"
-                    d="M27.462 21.43H24.52c-.441 0-.735-.294-.735-.735 0-.442.294-.736.735-.736h2.943c.442 0 .736-.294.736-.736 0-.441-.294-.735-.736-.735H24.52c-.441 0-.735-.295-.735-.736 0-.442.294-.736.735-.736h2.943c1.178 0 2.208 1.03 2.208 2.207 0 1.178-1.03 2.207-2.208 2.207Z" />
-                  <path fill="#fff"
-                    d="M27.463 24.374H15.69c-.883 0-1.619-.442-1.913-1.177-.147-.148-.294-.295-.589-.295h-2.06c-.441 0-.735-.294-.735-.736v-10.3c0-.441.294-.736.735-.736h2.796c.294 0 .589-.147.589-.441l.588-1.324c.442-.736 1.177-1.178 1.913-1.178h3.237c.295 0 .442.148.589.295.147.147.147.441.147.588a9.243 9.243 0 0 0-.441 2.796c0 .442-.442.736-.736.736-.442 0-.736-.441-.736-.736 0-.736.147-1.471.294-2.207h-2.354c-.294 0-.588.147-.588.441l-.589 1.325c-.441.736-1.177 1.177-1.913 1.177h-2.06v8.829h1.177c.883 0 1.472.441 1.913 1.03.147.294.442.441.589.441h11.771c.442 0 .736-.294.736-.736 0-.441-.294-.735-.735-.735h-2.944c-.44 0-.735-.294-.735-.736 0-.441.294-.736.735-.736h2.944c1.177 0 2.207 1.03 2.207 2.207 0 1.178-.883 2.208-2.06 2.208Z" />
-                  <path fill="#fff"
-                    d="M31.73 35.556h-3.973c-2.354 0-4.561-1.177-5.739-3.237-1.618-2.649-2.501-5.592-2.795-8.535 0-.147 0-.441.147-.588.147-.148.294-.295.588-.295h5.886c.442 0 .736.295.736.736 0 1.03.736 1.913 1.766 2.06l3.826.736c1.03.147 1.765 1.177 1.765 2.207v4.709c0 1.177-1.03 2.207-2.207 2.207ZM20.841 24.373c.295 2.501 1.177 5.003 2.502 7.21.883 1.471 2.648 2.502 4.414 2.502h3.973c.442 0 .736-.295.736-.736V28.64c0-.294-.294-.588-.589-.736l-3.825-.735c-1.472-.295-2.502-1.325-2.796-2.796H20.84ZM25.844 12.6h-5.886c-.147 0-.441-.147-.588-.294-.147-.147-.147-.295-.147-.589.294-2.943 1.177-5.886 2.648-8.387A7.188 7.188 0 0 1 27.757.24h3.973c1.177 0 2.207 1.03 2.207 2.207v4.709c0 1.03-.735 1.913-1.765 2.207l-3.826.736c-.883.147-1.619 1.03-1.766 1.912 0 .295-.294.59-.736.59Zm-5.003-1.471h4.415c.441-1.325 1.471-2.355 2.796-2.502l3.825-.736c.295 0 .589-.441.589-.735v-4.71c0-.44-.294-.735-.736-.735h-3.973c-1.766 0-3.531 1.03-4.414 2.502-1.325 2.06-2.207 4.561-2.502 6.916Z" />
-                </svg>
-              </div>
-              <div class="widgets__descr">
-                <h3 class="widgets__title">Консультация онлайн</h3>
-                <p class="widgets__text">
-                  Мы свяжемся с вами для бесплатной консультации
-                </p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="advantages section">
-      <!-- Контент преимуществ -->
-      <div class="wrapper">
-        <div class="advantages__grid">
-          <h2 class="visually-hidden">Наши преимущества</h2>
-          <div class="advantages__photo">
-            <img src="./img/advantages/bg.jpg" alt="фото садового участка" width="640" loading="lazy" />
-          </div>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <div class="advantages__icon">
-                <img src="./img/advantages/1.svg" alt="иконка" />
-              </div>
-              <p class="advantages__text">
-                <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
-                на складе.
-              </p>
-            </li>
-            <li class="advantages__item">
-              <div class="advantages__icon">
-                <img src="./img/advantages/2.svg" alt="иконка" />
-              </div>
-              <p class="advantages__text">
-                <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
-                на складе.
-              </p>
-            </li>
-            <li class="advantages__item">
-              <div class="advantages__icon">
-                <img src="./img/advantages/3.svg" alt="иконка" />
-              </div>
-              <p class="advantages__text">
-                <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
-                на складе.
-              </p>
-            </li>
-            <li class="advantages__item">
-              <div class="advantages__icon">
-                <img src="./img/advantages/4.svg" alt="иконка" />
-              </div>
-              <p class="advantages__text">
-                <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
-                на складе.
-              </p>
-            </li>
-            <li class="advantages__item">
-              <div class="advantages__icon">
-                <img src="./img/advantages/5.svg" alt="иконка" />
-              </div>
-              <p class="advantages__text">
-                <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
-                на складе.
-              </p>
-            </li>
-            <li class="advantages__item">
-              <div class="advantages__icon">
-                <img src="./img/advantages/6.svg" alt="иконка" />
-              </div>
-              <p class="advantages__text">
-                <strong>Всегда в наличии</strong> Более 1000 кв.м. в наличии
-                на складе.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog section">
-      <!-- Контент анонсов каталога -->
-      <div class="wrapper">
-        <h2 class="title">Каталог готовой продукции</h2>
-        <ul class="catalog__list">
-          <li class="catalog-card">
-            <header class="catalog-card__header">
-              <img src="./img/catalog/1.jpg" alt="фото товара" width="415" loading="lazy" />
-            </header>
-
-            <div class="catalog-card__body">
-              <h3 class="catalog-card__name">Резиновая плитка</h3>
-              <p class="catalog-card__text">
-                Краткое описание резиновой плитки с её выгодными
-                преимуществами...
-              </p>
-              <span class="catalog-card__price">от 1 200 ₽/м²</span>
-
-              <a href="#" class="catalog-card__button button" data-dialog-button="modal-2"><span
-                  class="decorate"></span><span>Заказать звонок</span></a>
-            </div>
-          </li>
-
-          <li class="catalog-card">
-            <header class="catalog-card__header">
-              <img src="./img/catalog/1.jpg" alt="фото товара" width="415" loading="lazy" />
-            </header>
-
-            <div class="catalog-card__body">
-              <h3 class="catalog-card__name">Резиновая плитка</h3>
-              <p class="catalog-card__text">
-                Краткое описание резиновой плитки с её выгодными
-                преимуществами...
-              </p>
-              <span class="catalog-card__price">от 1 200 ₽/м²</span>
-
-              <a href="#" class="catalog-card__button button" data-dialog-button="modal-2"><span
-                  class="decorate"></span><span>Заказать звонок</span></a>
-            </div>
-          </li>
-
-          <li class="catalog-card">
-            <header class="catalog-card__header">
-              <img src="./img/catalog/1.jpg" alt="фото товара" width="415" loading="lazy" />
-            </header>
-
-            <div class="catalog-card__body">
-              <h3 class="catalog-card__name">Резиновая плитка</h3>
-              <p class="catalog-card__text">
-                Краткое описание резиновой плитки с её выгодными
-                преимуществами...
-              </p>
-              <span class="catalog-card__price">от 1 200 ₽/м²</span>
-
-              <a href="#" class="catalog-card__button button" data-dialog-button="modal-2"><span
-                  class="decorate"></span><span>Заказать звонок</span></a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="partners section">
-      <!-- Контент раздела наши партнёры -->
-      <div class="wrapper">
-        <div class="section__header">
-          <h2 class="title">С нами работают, нам доверяют</h2>
-          <p class="subtitle">
-            Мы зарекомендовали себя как надежные подрядчики у более чем
-            72 Российских компаний,многие из которых вам уже известны
-          </p>
-        </div>
-
-        <!-- Swiper -->
-        <div class="partners__slider swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a class="partners__link">
-                <img class="partners__logo" src="./img/partners/1.png" alt="логотип партнёра" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="partners__link">
-                <img class="partners__logo" src="./img/partners/2.png" alt="логотип партнёра" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="partners__link">
-                <img class="partners__logo" src="./img/partners/3.png" alt="логотип партнёра" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="partners__link">
-                <img class="partners__logo" src="./img/partners/4.png" alt="логотип партнёра" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="partners__link">
-                <img class="partners__logo" src="./img/partners/1.png" alt="логотип партнёра" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="partners__link">
-                <img class="partners__logo" src="./img/partners/2.png" alt="логотип партнёра" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="partners__link">
-                <img class="partners__logo" src="./img/partners/3.png" alt="логотип партнёра" />
-              </a>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog section">
-      <!-- Контент анонсов каталога -->
-      <div class="wrapper">
-        <h2 class="title">Резиновая крошка и сопутствующие товары</h2>
-        <ul class="catalog__list">
-          <li class="catalog-card">
-            <header class="catalog-card__header">
-              <img src="./img/catalog/3.jpg" alt="фото товара" width="415" loading="lazy" />
-            </header>
-
-            <div class="catalog-card__body">
-              <h3 class="catalog-card__name">Сопутствующие товары</h3>
-              <p class="catalog-card__text">
-                Краткое описание резиновой плитки с её выгодными
-                преимуществами...
-              </p>
-              <span class="catalog-card__price">от 1 200 ₽</span>
-
-              <a href="#" class="catalog-card__button button" data-dialog-button="modal-2"><span
-                  class="decorate"></span><span>Подробнее</span></a>
-            </div>
-          </li>
-
-          <li class="catalog-card">
-            <header class="catalog-card__header">
-              <img src="./img/catalog/2.jpg" alt="фото товара" width="415" loading="lazy" />
-            </header>
-
-            <div class="catalog-card__body">
-              <h3 class="catalog-card__name">Сопутствующие товары</h3>
-              <p class="catalog-card__text">
-                Краткое описание резиновой плитки с её выгодными
-                преимуществами...
-              </p>
-              <span class="catalog-card__price">от 1 200 ₽</span>
-
-              <a href="#" class="catalog-card__button button" data-dialog-button="modal-2"><span
-                  class="decorate"></span><span>Подробнее</span></a>
-            </div>
-          </li>
-
-          <li class="catalog-card">
-            <header class="catalog-card__header">
-              <img src="./img/catalog/3.jpg" alt="фото товара" width="415" loading="lazy" />
-            </header>
-
-            <div class="catalog-card__body">
-              <h3 class="catalog-card__name">Сопутствующие товары</h3>
-              <p class="catalog-card__text">
-                Краткое описание резиновой плитки с её выгодными
-                преимуществами...
-              </p>
-              <span class="catalog-card__price">от 1 200 ₽</span>
-
-              <a href="#" class="catalog-card__button button" data-dialog-button="modal-2"><span
-                  class="decorate"></span><span>Подробнее</span></a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="order-steps section">
-      <!-- Контент шагов оформления заказа -->
-      <div class="wrapper">
-        <div class="order-steps__grid">
-          <div class="order-steps__details">
-            <h2 class="title">Порядок оформления заказа + доставка</h2>
-            <ol class="order-steps__list">
-              <li class="order-steps__item">
-                Позвоните нам, Напишите на почту или оставьте заявку на сайте.
-              </li>
-              <li class="order-steps__item">
-                Наш менеджер обсуждает с вами детали заявки и формирует
-                коммерческое предложение.
-              </li>
-              <li class="order-steps__item">
-                Вы получаете КП и принимаете решение о покупке.
-              </li>
-              <li class="order-steps__item">
-                Оплачиваете заказ удобным для вас способом.
-              </li>
-              <li class="order-steps__item">
-                Происходит производство/отгрузка товара со склада.
-              </li>
-              <li class="order-steps__item">
-                Доставка товара и подписание закрывающих документов при
-                получении.
-              </li>
-            </ol>
-          </div>
-          <div class="order-steps__photo">
-            <img src="./img/order-steps/1.jpg" alt="фото благоустроенной территории" width="950" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="online-consultation section">
-      <!-- Контент онлайн консультации -->
-      <div class="wrapper">
-        <div class="online-consultation__grid">
-          <div class="online-consultation__left">
-            <h2 class="title">Затрудняетесь с выбором?</h2>
-            <p class="text">
-              Мы бесплатно проконсультируем вас по телефону или в чате.
-              Позвоните или оставьте заявку через форму на сайте.
-            </p>
-          </div>
-          <div class="online-consultation__center">
-            <img src="./img/online-consultation/1.png" alt="фото плитки" loading="lazy" width="424" />
-          </div>
-          <div class="online-consultation__right">
-            <a class="phone" href="tel:84951980228">8 (495) 198 02 28</a>
-            <a href="#" class="button" data-dialog-button="modal-2"><span class="decorate"></span><span>Задать
-                вопрос</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="licenses-slider section">
-      <!-- Контент слайдера с лицензиями и сертификатами -->
-      <!-- Swiper -->
-      <div class="wrapper">
-        <h2 class="title">Лицензии и сертификаты</h2>
-
-        <div class="swiper">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <a class="licenses-slider__link" data-fslightbox="licenses-gallery" href="./img/licenses/1.jpg">
-                <img class="licenses-slider__photo" src="./img/licenses/1.jpg" alt="сертификат" loading="lazy"
-                  width="300">
-              </a>
-              <p class="licenses-slider__text">Название документа или его описание</p>
-            </div>
-            <div class="swiper-slide">
-              <a class="licenses-slider__link" data-fslightbox="licenses-gallery" href="./img/licenses/1.jpg">
-                <img class="licenses-slider__photo" src="./img/licenses/1.jpg" alt="сертификат" loading="lazy"
-                  width="300">
-              </a>
-              <p class="licenses-slider__text">Название документа или его описание</p>
-            </div>
-            <div class="swiper-slide">
-              <a class="licenses-slider__link" data-fslightbox="licenses-gallery" href="./img/licenses/1.jpg">
-                <img class="licenses-slider__photo" src="./img/licenses/1.jpg" alt="сертификат" loading="lazy"
-                  width="300">
-              </a>
-              <p class="licenses-slider__text">Название документа или его описание</p>
-            </div>
-            <div class="swiper-slide">
-              <a class="licenses-slider__link" data-fslightbox="licenses-gallery" href="./img/licenses/1.jpg">
-                <img class="licenses-slider__photo" src="./img/licenses/1.jpg" alt="сертификат" loading="lazy"
-                  width="300">
-              </a>
-              <p class="licenses-slider__text">Название документа или его описание</p>
-            </div>
-            <div class="swiper-slide">
-              <a class="licenses-slider__link" data-fslightbox="licenses-gallery" href="./img/licenses/1.jpg">
-                <img class="licenses-slider__photo" src="./img/licenses/1.jpg" alt="сертификат" loading="lazy"
-                  width="300">
-              </a>
-              <p class="licenses-slider__text">Название документа или его описание</p>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-
-    </section>
-
-    <section class="portfolio section">
-      <!-- Контент портфолио работ в виде фотогалереи -->
-      <div class="wrapper">
-        <h2 class="title">Реализованные объекты на&nbsp;которых
-          использовалась наша продукция</h2>
-        <ul class="portfolio__list gallery-grid">
-          <li class="gallery-grid__item gallery-grid__item-1">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-2">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-3">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-4">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-5">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-6">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-7">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-8">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-9">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-          <li class="gallery-grid__item gallery-grid__item-10">
-            <a href="./img/portfolio/1.jpg" data-fslightbox="portfolio-gallery-1" class="portfolio__link">
-              <img src="./img/portfolio/1.jpg" alt="фото портфолио" loading="lazy">
-            </a>
-          </li>
-        </ul>
-      </div>
-
-    </section>
-
-    <section class="delivery section">
-      <!-- Контент доставки заказа -->
-      <div class="wrapper">
-        <h2 class="title">Доставка в любой город России</h2>
-
-        <!-- Swiper -->
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a class="delivery__link">
-                <img class="delivery__logo" src="./img/delivery/1.png" alt="логотип" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="delivery__link">
-                <img class="delivery__logo" src="./img/delivery/2.png" alt="логотип" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="delivery__link">
-                <img class="delivery__logo" src="./img/delivery/3.png" alt="логотип" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="delivery__link">
-                <img class="delivery__logo" src="./img/delivery/4.png" alt="логотип" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="delivery__link">
-                <img class="delivery__logo" src="./img/delivery/5.png" alt="логотип" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="delivery__link">
-                <img class="delivery__logo" src="./img/delivery/1.png" alt="логотип" />
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a class="delivery__link">
-                <img class="delivery__logo" src="./img/delivery/2.png" alt="логотип" />
-              </a>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="delivery__footer">
-          <p class="delivery__details">Доставка по Москве и области от 1 000 рублей.</p>
-          <a href="#" class="catalog-card__button button" data-dialog-button="modal-2"><span
-              class="decorate"></span><span>Подробнее о доставке</span></a>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="production-gallery section">
-      <!-- Контент фотогалереи нашего производства -->
-      <div class="wrapper">
-        <h2 class="title">Фото с нашего производства</h2>
-        <ul class="production-gallery__list">
-          <li class="production-gallery__item">
-            <a href="./img/production/1.jpg" data-fslightbox="production-gallery-1" class="production-gallery__link">
-              <img src="./img/production/1.jpg" alt="фото с производства" loading="lazy">
-              <div class="production-gallery__cover">
-                <h3>Название процесса производства</h3>
-                <p>Дополнительные инструменты
-                  и материалы, которые необходимы для производства, ремонта и укладки покрытий из резиновой крошки.</p>
-              </div>
-            </a>
-          </li>
-          <li class="production-gallery__item">
-            <a href="./img/production/1.jpg" data-fslightbox="production-gallery-1" class="production-gallery__link">
-              <img src="./img/production/1.jpg" alt="фото с производства" loading="lazy">
-              <div class="production-gallery__cover">
-                <h3>Название процесса производства</h3>
-                <p>Дополнительные инструменты
-                  и материалы, которые необходимы для производства, ремонта и укладки покрытий из резиновой крошки.</p>
-              </div>
-            </a>
-          </li>
-          <li class="production-gallery__item">
-            <a href="./img/production/1.jpg" data-fslightbox="production-gallery-1" class="production-gallery__link">
-              <img src="./img/production/1.jpg" alt="фото с производства" loading="lazy">
-              <div class="production-gallery__cover">
-                <h3>Название процесса производства</h3>
-                <p>Дополнительные инструменты
-                  и материалы, которые необходимы для производства, ремонта и укладки покрытий из резиновой крошки.</p>
-              </div>
-            </a>
-          </li>
-          <li class="production-gallery__item">
-            <a href="./img/production/1.jpg" data-fslightbox="production-gallery-1" class="production-gallery__link">
-              <img src="./img/production/1.jpg" alt="фото с производства" loading="lazy">
-              <div class="production-gallery__cover">
-                <h3>Название процесса производства</h3>
-                <p>Дополнительные инструменты
-                  и материалы, которые необходимы для производства, ремонта и укладки покрытий из резиновой крошки.</p>
-              </div>
-            </a>
-          </li>
-          <li class="production-gallery__item">
-            <a href="./img/production/1.jpg" data-fslightbox="production-gallery-1" class="production-gallery__link">
-              <img src="./img/production/1.jpg" alt="фото с производства" loading="lazy">
-              <div class="production-gallery__cover">
-                <h3>Название процесса производства</h3>
-                <p>Дополнительные инструменты
-                  и материалы, которые необходимы для производства, ремонта и укладки покрытий из резиновой крошки.</p>
-              </div>
-            </a>
-          </li>
-          <li class="production-gallery__item">
-            <a href="./img/production/1.jpg" data-fslightbox="production-gallery-1" class="production-gallery__link">
-              <img src="./img/production/1.jpg" alt="фото с производства" loading="lazy">
-              <div class="production-gallery__cover">
-                <h3>Название процесса производства</h3>
-                <p>Дополнительные инструменты
-                  и материалы, которые необходимы для производства, ремонта и укладки покрытий из резиновой крошки.</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="online-consultation online-consultation--mod section">
-      <!-- Контент онлайн консультации -->
-      <div class="wrapper">
-        <div class="online-consultation__grid">
-          <div class="online-consultation__left">
-            <h2 class="title">Затрудняетесь с выбором?</h2>
-            <p class="text">
-              Мы бесплатно проконсультируем вас по телефону или в чате.
-              Позвоните или оставьте заявку через форму на сайте.
-            </p>
-          </div>
-          <div class="online-consultation__center">
-            <img src="./img/online-consultation/2.png" alt="фото плитки" loading="lazy" width="278" />
-          </div>
-          <div class="online-consultation__right">
-            <a class="phone" href="tel:84951980228">8 (495) 198 02 28</a>
-            <a href="#" class="button" data-dialog-button="modal-2"><span class="decorate"></span><span>Задать
-                вопрос</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="page__footer footer">
-    <!-- Контент подвала сайта -->
-    <div class="wrapper">
-      <h2 class="visually-hidden">Дополнительная информация</h2>
-      <div class="footer__grid">
-
-        <div class="footer__logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="251" height="23" fill="none">
-            <path fill="#99BD3D"
-              d="M9.33.64c2.08 0 3.94.47 5.58 1.41a9.94 9.94 0 0 1 3.9 3.87c.94 1.64 1.41 3.5 1.41 5.58s-.47 3.95-1.41 5.61a10.21 10.21 0 0 1-3.9 3.87c-1.64.92-3.5 1.38-5.58 1.38-1.86 0-3.54-.32-5.04-.96a9.725 9.725 0 0 1-3.72-2.79l3.09-2.88c1.48 1.66 3.29 2.49 5.43 2.49 1.54 0 2.84-.45 3.9-1.35 1.08-.9 1.78-2.11 2.1-3.63H6.57V9.52h8.46c-.34-1.44-1.04-2.59-2.1-3.45-1.06-.86-2.34-1.29-3.84-1.29-2.14 0-3.95.83-5.43 2.49L.57 4.39c1-1.22 2.24-2.15 3.72-2.79C5.79.96 7.47.64 9.33.64Zm24.326 12.9h-3.36V22h-4.83V1h4.83v8.49h3.48L39.296 1h5.13l-6.87 10.14L44.636 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84Z"
-              class="first" />
-            <path fill="#fff"
-              d="M83.209 13.54h-3.36V22h-4.83V1h4.83v8.49h3.48L88.849 1h5.13l-6.87 10.14L94.189 22h-5.52l-5.46-8.46Zm24.689 8.82c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM143.741 22l-.03-12.57-6.18 10.35h-2.16l-6.18-10.11V22h-4.56V1h4.02l7.86 13.05L144.251 1h4.02l.03 21h-4.56Zm36.147-10.56c0 2.78-.95 4.97-2.85 6.57-1.88 1.58-4.59 2.46-8.13 2.64v2.28h-4.47v-2.31c-3.56-.2-6.29-1.09-8.19-2.67-1.88-1.6-2.82-3.77-2.82-6.51 0-2.76.94-4.92 2.82-6.48 1.9-1.58 4.63-2.48 8.19-2.7V.1h4.47v2.13c3.54.2 6.25 1.1 8.13 2.7 1.9 1.6 2.85 3.77 2.85 6.51Zm-10.98 5.4c2.12-.2 3.7-.74 4.74-1.62 1.04-.9 1.56-2.17 1.56-3.81 0-3.2-2.1-4.98-6.3-5.34v10.77Zm-10.77-5.4c0 3.16 2.1 4.96 6.3 5.4V6.07c-2.14.2-3.73.74-4.77 1.62-1.02.86-1.53 2.11-1.53 3.75Zm36.906 10.92c-2.18 0-4.15-.47-5.91-1.41-1.74-.94-3.11-2.23-4.11-3.87-.98-1.66-1.47-3.52-1.47-5.58s.49-3.91 1.47-5.55c1-1.66 2.37-2.96 4.11-3.9 1.76-.94 3.73-1.41 5.91-1.41s4.14.47 5.88 1.41c1.74.94 3.11 2.24 4.11 3.9 1 1.64 1.5 3.49 1.5 5.55 0 2.06-.5 3.92-1.5 5.58-1 1.64-2.37 2.93-4.11 3.87-1.74.94-3.7 1.41-5.88 1.41Zm0-4.14c1.24 0 2.36-.28 3.36-.84 1-.58 1.78-1.38 2.34-2.4.58-1.02.87-2.18.87-3.48 0-1.3-.29-2.46-.87-3.48a5.93 5.93 0 0 0-2.34-2.37c-1-.58-2.12-.87-3.36-.87-1.24 0-2.36.29-3.36.87-1 .56-1.79 1.35-2.37 2.37-.56 1.02-.84 2.18-.84 3.48 0 1.3.28 2.46.84 3.48a6.351 6.351 0 0 0 2.37 2.4c1 .56 2.12.84 3.36.84ZM220.868 1c1.86 0 3.47.31 4.83.93 1.38.62 2.44 1.5 3.18 2.64.74 1.14 1.11 2.49 1.11 4.05 0 1.54-.37 2.89-1.11 4.05-.74 1.14-1.8 2.02-3.18 2.64-1.36.6-2.97.9-4.83.9h-4.23V22h-4.86V1h9.09Zm-.27 11.25c1.46 0 2.57-.31 3.33-.93.76-.64 1.14-1.54 1.14-2.7 0-1.18-.38-2.08-1.14-2.7-.76-.64-1.87-.96-3.33-.96h-3.96v7.29h3.96Zm29.56-7.29h-6.72V22h-4.8V4.96h-6.69V1h18.21v3.96Z"
-              class="last" />
-          </svg>
-
-          <p class="footer__text">
-            Производство покрытий из резиновой крошки
-          </p>
-        </div>
-
-        <ul class="footer__navigation">
-          <li class="footer__navigation-item">
-            <a href="#" class="footer__navigation-link">Блог</a>
-            <a href="#" class="footer__navigation-link">Акции и спец-предложения</a>
-            <a href="#" class="footer__navigation-link">Выполненные проекты</a>
-            <a href="#" class="footer__navigation-link">Доставка</a>
-            <a href="#" class="footer__navigation-link">Отзывы</a>
-            <a href="#" class="footer__navigation-link">Версия для слабовидящих</a>
-            <a href="#" class="footer__navigation-link">Официальные данные</a>
-            <a href="#" class="footer__navigation-link">Написать нам</a>
-            <a href="#" class="footer__navigation-link">О компании</a>
-          </li>
-        </ul>
-
-        <ul class="footer__contacts">
-          <li class="footer__contacts-item">
-            Менеджер: <a href="tel:84951980228">+7 (495) 198 02 28</a>
-          </li>
-          <li class="footer__contacts-item">Бухгалтерия: <a href="tel:89933459287">+7 993 345 92 87</a></li>
-
-          <li class="footer__contacts-item">E-mail: <a href="mailto:ecocomfort@yandex.ru">ecocomfort@yandex.ru</a></li>
-          <li class="footer__contacts-item">
-            <address>Адрес производства и отгрузки:<br>
-              г. Москва, ул. Ибрагимова, д. 31</address>
-          </li>
-          <li class="footer__contacts-item">Режим работы офиса:<br>
-            с 9:00 до 18:00 (СБ-ВС – выходной)</li>
-          <li class="footer__contacts-item">Режим работы склада:<br>
-            с 10:00 до 16:00 (СБ-ВС – выходной)</li>
-          <li class="footer__contacts-item"></li>
-
-        </ul>
-      </div>
-    </div>
-    <div class="wrapper">
-
-    </div>
-  </footer>
-
-  <div class="overlay" title="Кликните если хотите закрыть диалоговое окно"></div>
-
-  <!-- Диалоговые окна -->
-  <!-- Задать вопрос -->
-  <section class="modal" data-dialog-modal="modal-2">
-    <form action="javascript:void(0);" method="post">
-      <div class="modal__wrapper">
-        <!-- шапка диалогового окна -->
-        <div class="modal__header">
-          <h2 class="title">Заказать звонок</h2>
-          <p class="subtitle">
-            Заполните простую форму. Наши специалисты свяжутся с вами в
-            ближайшее время.
-          </p>
-        </div>
-        <!-- КОНЕЦ шапка диалогового окна -->
-
-        <!-- тело диалогового окна  -->
-        <div class="modal__body">
-          <div class="modal__grid">
-            <div class="modal__form-item">
-              <label for="question-form-tel">ФИО:</label>
-              <input id="question-form-tel" type="text" placeholder="Введите имя" />
-            </div>
-
-            <div class="modal__form-item">
-              <label for="question-form-name">Телефон:</label>
-              <input id="question-form-name" type="tel" placeholder="Введите телефон" required />
-            </div>
-
-            <div class="modal__form-item">
-              <label for="question-form-email">E-mail:</label>
-              <input id="question-form-email" type="text" placeholder="Для ответа" />
-            </div>
-
-            <div class="modal__form-item modal__form-item--textarea">
-              <label for="question-form-texarea">Сообщение:</label>
-              <textarea id="question-form-texarea" cols="30" rows="10"
-                placeholder="Введите Ваш вопрос или сообщение"></textarea>
-            </div>
-          </div>
-        </div>
-        <!-- КОНЕЦ тело диалогового окна  -->
-
-        <!-- Подвал диалогового окна -->
-        <div class="modal__footer">
-          <div class="modal__form-item--check">
-            <input class="visually-hidden" type="checkbox" name="user-consent" id="promo-form-consent" checked />
-            <label for="promo-form-consent">Я согласен с условиями обработки
-              <a href="#" target="_blank">персональных данных</a></label>
-          </div>
-
-          <button class="button" type="submit">
-            <span>Отправить</span>
+          <!-- КОНЕЦ Подвал диалогового окна -->
+
+          <!-- кнопка закрытия диалогового окна -->
+          <!-- класс close-btn - обязателен!  -->
+          <button class="button button--icon close-btn" type="button">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M21 1L1 21" stroke="white" stroke-width="2" />
+              <path d="M21 21L1 0.999999" stroke="white" stroke-width="2" />
+            </svg>
             <span class="decorate"></span>
           </button>
+          <!-- КОНЕЦ кнопка закрытия диалогового окна -->
         </div>
-        <!-- КОНЕЦ Подвал диалогового окна -->
+      </form>
+    </section>
+    <!-- КОНЕЦ Диалоговые окна  -->
 
-        <!-- кнопка закрытия диалогового окна -->
-        <!-- класс close-btn - обязателен!  -->
-        <button class="button button--icon close-btn" type="button">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 1L1 21" stroke="white" stroke-width="2" />
-            <path d="M21 21L1 0.999999" stroke="white" stroke-width="2" />
-          </svg>
-          <span class="decorate"></span>
-        </button>
-        <!-- КОНЕЦ кнопка закрытия диалогового окна -->
-      </div>
-    </form>
-  </section>
-  <!-- КОНЕЦ Диалоговые окна  -->
-
-  <!-- подключаем скрипты и js-файлы библиотек -->
-  <script src="libs/swiper-bundle.min.js"></script>
-  <script src="libs/fslightbox.js"></script>
-  <script src="js/modules.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+    <!-- подключаем скрипты и js-файлы библиотек -->
+    <script src="libs/swiper-bundle.min.js"></script>
+    <script src="libs/fslightbox.js"></script>
+    <script src="js/modules.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

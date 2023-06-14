@@ -51,4 +51,9 @@
     letter-spacing: 0.01em;
     color: #616161;
   }
+  @media (max-width: 800px) {
+    &__footer {
+      grid-template-columns: 1fr;
+    }
+  }
 }
